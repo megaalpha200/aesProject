@@ -1,0 +1,29 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/react.js/aes/node_modules
+/react.js/aes/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/react.js/aes/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#kotlin
+/kotlin/aes/.idea
+/kotlin/aes/out
+/kotlin/aes/des.iml
+
