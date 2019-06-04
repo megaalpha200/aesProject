@@ -23,10 +23,32 @@ val SUB_BYTE_S_BOX = arrayOf(arrayOf("63", "7c", "77", "7b", "f2", "6b", "6f", "
                                     arrayOf("e1", "f8", "98", "11", "69", "d9", "8e", "94", "9b", "1e", "87", "e9", "ce", "55", "28", "df"),
                                     arrayOf("8c", "a1", "89", "0d", "bf", "e6", "42", "68", "41", "99", "2d", "0f", "b0", "54", "bb", "16"))
 
+val INV_SUB_BYTE_S_BOX = arrayOf(arrayOf("52", "09", "6a", "d5", "30", "36", "a5", "38", "bf", "40", "a3", "9e", "81", "f3", "d7", "fb"),
+                                    arrayOf("7c", "e3", "39", "82", "9b", "2f", "ff", "87", "34", "8e", "43", "44", "c4", "de", "e9", "cb"),
+                                    arrayOf("54", "7b", "94", "32", "a6", "c2", "23", "3d", "ee", "4c", "95", "0b", "42", "fa", "c3", "4e"),
+                                    arrayOf("08", "2e", "a1", "66", "28", "d9", "24", "b2", "76", "5b", "a2", "49", "6d", "8b", "d1", "25"),
+                                    arrayOf("72", "f8", "f6", "64", "86", "68", "98", "16", "d4", "a4", "5c", "cc", "5d", "65", "b6", "92"),
+                                    arrayOf("6c", "70", "48", "50", "fd", "ed", "b9", "da", "5e", "15", "46", "57", "a7", "8d", "9d", "84"),
+                                    arrayOf("90", "d8", "ab", "00", "8c", "bc", "d3", "0a", "f7", "e4", "58", "05", "b8", "b3", "45", "06"),
+                                    arrayOf("d0", "2c", "1e", "8f", "ca", "3f", "0f", "02", "c1", "af", "bd", "03", "01", "13", "8a", "6b"),
+                                    arrayOf("3a", "91", "11", "41", "4f", "67", "dc", "ea", "97", "f2", "cf", "ce", "f0", "b4", "e6", "73"),
+                                    arrayOf("96", "ac", "74", "22", "e7", "ad", "35", "85", "e2", "f9", "37", "e8", "1c", "75", "df", "6e"),
+                                    arrayOf("47", "f1", "1a", "71", "1d", "29", "c5", "89", "6f", "b7", "62", "0e", "aa", "18", "be", "1b"),
+                                    arrayOf("fc", "56", "3e", "4b", "c6", "d2", "79", "20", "9a", "db", "c0", "fe", "78", "cd", "5a", "f4"),
+                                    arrayOf("1f", "dd", "a8", "33", "88", "07", "c7", "31", "b1", "12", "10", "59", "27", "80", "ec", "5f"),
+                                    arrayOf("60", "51", "7f", "a9", "19", "b5", "4a", "0d", "2d", "e5", "7a", "9f", "93", "c9", "9c", "ef"),
+                                    arrayOf("a0", "e0", "3b", "4d", "ae", "2a", "f5", "b0", "c8", "eb", "bb", "3c", "83", "53", "99", "61"),
+                                    arrayOf("17", "2b", "04", "7e", "ba", "77", "d6", "26", "e1", "69", "14", "63", "55", "21", "0c", "7d"))
+
 val MIX_COLS_CONSTANT_MATRIX = arrayOf(arrayOf("02", "03", "01", "01"),
                                         arrayOf("01", "02", "03", "01"),
                                         arrayOf("01", "01", "02", "03"),
                                         arrayOf("03", "01", "01", "02"))
+
+val INV_MIX_COLS_CONSTANT_MATRIX = arrayOf(arrayOf("0e", "0b", "0d", "09"),
+                                        arrayOf("09", "0e", "0b", "0d"),
+                                        arrayOf("0d", "09", "0e", "0b"),
+                                        arrayOf("0b", "0d", "09", "0e"))
 
 val MIX_COLS_E_TABLE = arrayOf(arrayOf("01", "03", "05", "0f", "11", "33", "55", "ff", "1a", "2e", "72", "96", "a1", "f8", "13", "35"),
                                 arrayOf("5f", "e1", "38", "48", "d8", "73", "95", "a4", "f7", "02", "06", "0a", "1e", "22", "66", "aa"),
@@ -64,6 +86,20 @@ val MIX_COLS_L_TABLE = arrayOf(arrayOf(NULL_CONSTANT, "00", "19", "01", "32", "0
 
 /*----------------------------------------------------------------------------*/
 
+enum class Mode (value: Int) {
+    ENCRYPT(0), DECRYPT(1);
+
+    private val mode = value
+
+    override fun toString() : String {
+        return when(mode) {
+            0 -> "Encrypt"
+            1 -> "Decrypt"
+            else -> ""
+        }
+    }
+}
+
 fun main() {
     /*val round1Key = generateNextRoundKey(convertStringToHex("Computer Science"), R_CONSTANTS[1])
     val round2Key = generateNextRoundKey(round1Key, R_CONSTANTS[2])
@@ -76,7 +112,7 @@ fun main() {
     println("After Pre-Round State: $preRoundState")
     roundFunction(preRoundState, round1Key)*/
 
-    aesEncrypt("0123456789abcdeffedcba9876543210", "0f1571c947d9e8590cb7add6af7f6798")
+    //aesEncrypt("0123456789abcdeffedcba9876543210", "0f1571c947d9e8590cb7add6af7f6798")
 }
 
 fun aesEncrypt(plaintext: String, initialKey: String) : String {
@@ -101,9 +137,9 @@ fun aesEncrypt(plaintext: String, initialKey: String) : String {
             tempRoundObject.preRoundState = if (roundStates[round - 1].isPreRound) roundStates[round - 1].preRoundState else roundStates[round - 1].addRoundKeyState
 
             if (round == 10)
-                roundStates.add(roundFunction(tempRoundObject, roundKeys[round], false))
+                roundStates.add(roundFunction(Mode.ENCRYPT, tempRoundObject, roundKeys[round], false))
             else
-                roundStates.add(roundFunction(tempRoundObject, roundKeys[round]))
+                roundStates.add(roundFunction(Mode.ENCRYPT, tempRoundObject, roundKeys[round]))
         }
 
         println(System.lineSeparator())
@@ -112,21 +148,7 @@ fun aesEncrypt(plaintext: String, initialKey: String) : String {
         println("Block State: ${block.chunked(2).joinToString(" ")}")
 
         println(System.lineSeparator())
-
-        roundStates.forEachIndexed { roundNum, roundObj ->
-            println("For Block ${blockNum + 1}, Round $roundNum...")
-
-            if (roundObj.isPreRound)
-                println("After Pre-Round: ${roundObj.preRoundState.chunked(2).joinToString(" ")}")
-            else {
-                println("After SubBytes: ${roundObj.subBytesState.chunked(2).joinToString(" ")}")
-                println("After ShiftRows: ${roundObj.shiftRowsState.chunked(2).joinToString(" ")}")
-                println("After MixColumns: ${roundObj.mixColumnsState.chunked(2).joinToString(" ")}")
-                println("After AddRoundKey: ${roundObj.addRoundKeyState.chunked(2).joinToString(" ")}")
-            }
-
-            println(System.lineSeparator())
-        }
+        displayRoundStates(roundStates, blockNum)
 
         finalCipherTextList.add(roundStates[roundStates.lastIndex].addRoundKeyState)
     }
@@ -136,29 +158,122 @@ fun aesEncrypt(plaintext: String, initialKey: String) : String {
     return finalCipherTextList.joinToString("")
 }
 
+fun aesDecrypt(ciphertext: String, initialKey: String) : String {
+    val ciphertextBlocks = ciphertext.chunked(32) { it.padEnd(32, '0').toString() }
+    val paddedInitialKey = initialKey.padEnd(32, '0')
+    val finalPlainTextList = arrayListOf<String>()
+
+    ciphertextBlocks.forEachIndexed { blockNum, block ->
+        val roundKeys = arrayListOf(paddedInitialKey)
+        val roundStates = arrayListOf<RoundObject>()
+
+        for (round in 1..10) {
+            roundKeys.add(generateNextRoundKey(roundKeys[round - 1], R_CONSTANTS[round]))
+        }
+
+        roundKeys.reverse()
+
+        val initialRoundObject = RoundObject(true)
+        initialRoundObject.preRoundState = preRoundFunction(block, roundKeys[0])
+        roundStates.add(initialRoundObject)
+
+        for(round in 1..10) {
+            println("Round $round Key: ${roundKeys[round]}")
+
+            val tempRoundObject = RoundObject()
+            tempRoundObject.preRoundState = if (roundStates[round - 1].isPreRound) roundStates[round - 1].preRoundState else roundStates[round - 1].mixColumnsState
+
+            if (round == 10)
+                roundStates.add(roundFunction(Mode.DECRYPT, tempRoundObject, roundKeys[round], false))
+            else
+                roundStates.add(roundFunction(Mode.DECRYPT, tempRoundObject, roundKeys[round]))
+        }
+
+        println(System.lineSeparator())
+
+        println("For Block ${blockNum + 1}...")
+        println("Block State: ${block.chunked(2).joinToString(" ")}")
+
+        println(System.lineSeparator())
+        displayRoundStates(roundStates, blockNum)
+
+        finalPlainTextList.add(roundStates[roundStates.lastIndex].addRoundKeyState)
+    }
+
+    //println("Ciphertext: ${roundStates[roundStates.lastIndex].addRoundKeyState.chunked(2).joinToString(" ")}")
+
+    return finalPlainTextList.joinToString("")
+}
+
+private fun displayRoundStates(roundStates: List<RoundObject>, blockNum: Int) {
+    roundStates.forEachIndexed { roundNum, roundObj ->
+        println("For Block ${blockNum + 1}, Round $roundNum...")
+
+        if (roundObj.isPreRound)
+            println("After Pre-Round: ${roundObj.preRoundState.chunked(2).joinToString(" ")}")
+        else {
+            println("After SubBytes: ${roundObj.subBytesState.chunked(2).joinToString(" ")}")
+            println("After ShiftRows: ${roundObj.shiftRowsState.chunked(2).joinToString(" ")}")
+            println("After MixColumns: ${roundObj.mixColumnsState.chunked(2).joinToString(" ")}")
+            println("After AddRoundKey: ${roundObj.addRoundKeyState.chunked(2).joinToString(" ")}")
+        }
+
+        println(System.lineSeparator())
+    }
+}
+
 /*--------------------------------Round Functions-------------------------------------*/
 
 fun preRoundFunction(initialState: String, roundKey: String) : String {
     return initialState hexor roundKey
 }
 
-fun roundFunction(roundObj: RoundObject, roundKey: String, useMixCols: Boolean = true) : RoundObject {
-    val subBytesState = subWord(roundObj.preRoundState)
-    val shiftRowState = shiftRows(subBytesState)
-
-    val finalStateForRound = if (useMixCols) {
-        val mixColumnsState = mixColumns(shiftRowState, MIX_COLS_CONSTANT_MATRIX)
-        roundObj.mixColumnsState = mixColumnsState
-        mixColumnsState hexor roundKey
+fun roundFunction(mode: Mode, roundObj: RoundObject, roundKey: String, useMixCols: Boolean = true) : RoundObject {
+    val mixColsConstant = when(mode) {
+        Mode.ENCRYPT -> MIX_COLS_CONSTANT_MATRIX
+        Mode.DECRYPT -> INV_MIX_COLS_CONSTANT_MATRIX
     }
-    else {
-        shiftRowState hexor roundKey
+
+    val subBytesState: String
+    val shiftRowState: String
+
+    when(mode) {
+        Mode.ENCRYPT -> {
+            subBytesState = subWord(roundObj.preRoundState)
+            shiftRowState = shiftRows(subBytesState)
+        }
+        Mode.DECRYPT -> {
+            shiftRowState = shiftRows(roundObj.preRoundState, true)
+            subBytesState = subWord(shiftRowState, true)
+        }
     }
 
     roundObj.subBytesState = subBytesState
     roundObj.shiftRowsState = shiftRowState
-    roundObj.addRoundKeyState = finalStateForRound
 
+    when(mode) {
+        Mode.ENCRYPT -> {
+            if (useMixCols) {
+                val mixColumnsState = mixColumns(shiftRowState, mixColsConstant)
+                roundObj.mixColumnsState = mixColumnsState
+                roundObj.addRoundKeyState = mixColumnsState hexor roundKey
+            }
+            else {
+                roundObj.addRoundKeyState = shiftRowState hexor roundKey
+            }
+        }
+
+        Mode.DECRYPT -> {
+            if (useMixCols) {
+                val addRoundKeyState = subBytesState hexor roundKey
+                roundObj.addRoundKeyState = addRoundKeyState
+                roundObj.mixColumnsState = mixColumns(addRoundKeyState, mixColsConstant)
+            }
+            else {
+                roundObj.addRoundKeyState = subBytesState hexor roundKey
+            }
+        }
+    }
 
     //println(mixColumnsState.chunked(8) { it.chunked(2) })
     //println(finalStateForRound.chunked(8) { it.chunked(2) })
@@ -166,12 +281,15 @@ fun roundFunction(roundObj: RoundObject, roundKey: String, useMixCols: Boolean =
     return roundObj
 }
 
-fun shiftRows(state: String) : String {
+fun shiftRows(state: String, isInverse: Boolean = false) : String {
     val postShiftRowsStateList = arrayListOf<String>()
     val preShiftRowsState = rowColOrientStateWords(state).chunked(8)
 
     for (offset in 0 until preShiftRowsState.size) {
-        postShiftRowsStateList.add(rotWord(preShiftRowsState[offset], offset))
+        if (isInverse)
+            postShiftRowsStateList.add(rotWordRight(preShiftRowsState[offset], offset))
+        else
+            postShiftRowsStateList.add(rotWordLeft(preShiftRowsState[offset], offset))
     }
 
     return rowColOrientStateWords(postShiftRowsStateList.joinToString(""))
@@ -254,7 +372,7 @@ fun generateNextRoundKey(inputKey: String, roundConstant: String) : String {
 }
 
 fun generateTWord(lastWord: String, roundConstant: String) : String {
-    val rotatedLastWordFromInput = rotWord(lastWord)
+    val rotatedLastWordFromInput = rotWordLeft(lastWord)
     val subLastWordListFromInput = subWord(rotatedLastWordFromInput)
 
     return subLastWordListFromInput hexor roundConstant
@@ -264,7 +382,7 @@ fun generateTWord(lastWord: String, roundConstant: String) : String {
 
 /*--------------------------------AUX Functions-------------------------------------*/
 
-fun rotWord(word: String, offset: Int = 1) : String {
+fun rotWordLeft(word: String, offset: Int = 1) : String {
     val chunkedWord = word.chunked(2)
     val rotatedList = arrayListOf<String>()
 
@@ -279,12 +397,30 @@ fun rotWord(word: String, offset: Int = 1) : String {
     return rotatedList.joinToString("")
 }
 
-fun subWord(word: String) : String {
+fun rotWordRight(word: String, offset: Int = 1) : String {
+    val chunkedWord = word.chunked(2)
+    val rotatedList = arrayListOf<String>()
+
+    for (j in chunkedWord.size - offset until chunkedWord.size) {
+        rotatedList.add(chunkedWord[j])
+    }
+
+    for (i in 0 until chunkedWord.size - offset) {
+        rotatedList.add(chunkedWord[i])
+    }
+
+    return rotatedList.joinToString("")
+}
+
+fun subWord(word: String, useInverseSubBytes: Boolean = false) : String {
     val chunkedWord = word.chunked(2)
     val subList = arrayListOf<String>()
 
     chunkedWord.forEach { value ->
-        subList.add(applySBox(value, SUB_BYTE_S_BOX))
+        if (useInverseSubBytes)
+            subList.add(applySBox(value, INV_SUB_BYTE_S_BOX))
+        else
+            subList.add(applySBox(value, SUB_BYTE_S_BOX))
     }
 
     return subList.joinToString("")

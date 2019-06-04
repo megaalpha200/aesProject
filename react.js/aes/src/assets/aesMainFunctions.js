@@ -143,22 +143,22 @@ const preRoundFunction = (initialState, roundKey) => {
 
 const roundFunction = (roundObj, roundKey, useMixCols = true) => {
     const subBytesState = subWord(roundObj.preRoundState);
-    const shiftRowState = shiftRows(subBytesState);
+    const shiftRowsState = shiftRows(subBytesState);
 
     let finalStateForRound;
 
     if(useMixCols) {
-        const mixColumnsState = mixColumns(shiftRowState, MIX_COLS_CONSTANT_MATRIX);
+        const mixColumnsState = mixColumns(shiftRowsState, MIX_COLS_CONSTANT_MATRIX);
         roundObj.mixColumnsState = mixColumnsState;
 
         finalStateForRound = hexmanip.hexor(mixColumnsState, roundKey);
     }
     else {
-        finalStateForRound = hexmanip.hexor(shiftRowState, roundKey);
+        finalStateForRound = hexmanip.hexor(shiftRowsState, roundKey);
     }
 
     roundObj.subBytesState = subBytesState;
-    roundObj.shiftRowState = shiftRowState;
+    roundObj.shiftRowsState = shiftRowsState;
     roundObj.addRoundKeyState = finalStateForRound;
 
     return roundObj;
