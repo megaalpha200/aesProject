@@ -1,71 +1,93 @@
-import textConversions.convertHexToBin
-import textConversions.convertHexToString
-import textConversions.convertStringToHex
+import textConversions.*
 
 fun main() {
-    var isChoiceValid: Boolean
+    encryptDecryptMenu()
+}
+
+fun encryptDecryptMenu() {
+    var mode: Mode? = null
+    var inputTextAndKeyPair: Pair<String, String>? = null
 
     do {
-        println("Please choose an option: ")
-        println("\t1. Encrypt")
-        println("\t2. Decrypt")
-        print("Choice: ")
+        try {
+            if (mode == null) {
+                print(System.lineSeparator())
+                println("AES Encryptor/Decryptor")
+                println("Using Kotlin/JVM")
+                println("Created by: Jose A. Alvarado")
+                println("Copyright J.A.A. Productions 2019")
 
-        isChoiceValid = when (readLine()!!.toInt()) {
-            1 -> { encryptDecryptMenu(Mode.ENCRYPT); true; }
-            2 -> { encryptDecryptMenu(Mode.DECRYPT); true; }
-            else -> false
-        }
+                println()
 
-        if (!isChoiceValid) {
-            println("Invalid Choice!")
+                println("Please choose an option: ")
+                println("\t1. Encrypt")
+                println("\t2. Decrypt")
+                println("\t3. Quit")
+                print("Choice: ")
+
+                mode = when (readLine()!!.toInt()) {
+                    1 -> Mode.ENCRYPT
+                    2 -> Mode.DECRYPT
+                    3 -> {
+                        println("Goodbye!")
+                        return
+                    }
+                    else -> throw WrongMenuChoiceException()
+                }
+            }
+
+            if (inputTextAndKeyPair == null) {
+                print(System.lineSeparator())
+
+                println("Please choose an option: ")
+                println("\t1. $mode String ${if (mode == Mode.ENCRYPT) "PlainText" else if (mode == Mode.DECRYPT) "CipherText" else ""}")
+                println("\t2. $mode Hexadecimal ${if (mode == Mode.ENCRYPT) "PlainText" else if (mode == Mode.DECRYPT) "CipherText" else ""}")
+                println("\t3. Quit")
+                print("Choice: ")
+                val menuOption = readLine()!!.toInt()
+
+                inputTextAndKeyPair = when(menuOption) {
+                    1 -> encryptDecryptStringInputTextPrep(mode)
+                    2 -> encryptDecryptHexInputTextPrep(mode)
+                    3 -> {
+                        println("Goodbye!")
+                        return
+                    }
+                    else -> null
+                }
+
+                if (inputTextAndKeyPair == null)
+                    throw WrongMenuChoiceException()
+            }
+
+
             print(System.lineSeparator())
+
+            when (mode) {
+                Mode.ENCRYPT -> encrypt(inputTextAndKeyPair.first, inputTextAndKeyPair.second)
+                Mode.DECRYPT -> decrypt(inputTextAndKeyPair.first, inputTextAndKeyPair.second)
+            }
+
+            println()
+
+            mode = null
+            inputTextAndKeyPair = null
         }
-
-    } while(!isChoiceValid)
-
-    print(System.lineSeparator())
-    println("AES Encryptor/Decryptor")
-    println("Using Kotlin/JVM")
-    println("Created by: Jose A. Alvarado")
-    println("Copyright J.A.A. Productions 2019")
+        catch (e: WrongMenuChoiceException) {
+            println(e.toString())
+        }
+        catch (e: NumberFormatException) {
+            println("$e - Please enter a number!")
+        }
+        catch (e: Exception) {
+            println(e.toString())
+            mode = null
+            inputTextAndKeyPair = null
+        }
+    } while(true)
 }
 
-fun encryptDecryptMenu(mode: Mode) {
-    var isChoiceValid: Boolean
-    var inputTextAndKeyPair: Pair<String, String>?
-    var swapLastRound: Boolean?
-
-    do {
-        print(System.lineSeparator())
-
-        println("Please choose an option: ")
-        println("\t1. $mode String ${if (mode == Mode.ENCRYPT) "PlainText" else if (mode == Mode.DECRYPT) "CipherText" else ""}")
-        println("\t2. $mode Hexadecimal ${if (mode == Mode.ENCRYPT) "PlainText" else if (mode == Mode.DECRYPT) "CipherText" else ""}")
-        print("Choice: ")
-        val menuOption = readLine()!!.toInt()
-
-        inputTextAndKeyPair = when(menuOption) {
-            1 -> encryptDecryptStringPlainTextPrep(mode)
-            2 -> encryptDecryptHexPlainTextPrep(mode)
-            else -> null
-        }
-
-        isChoiceValid = inputTextAndKeyPair != null
-        if (!isChoiceValid)
-            println("Invalid Choice!")
-
-    } while(!isChoiceValid)
-
-    print(System.lineSeparator())
-
-    when (mode) {
-        Mode.ENCRYPT -> encrypt(inputTextAndKeyPair!!.first, inputTextAndKeyPair.second)
-        Mode.DECRYPT -> decrypt(inputTextAndKeyPair!!.first, inputTextAndKeyPair.second)
-    }
-}
-
-fun encryptDecryptStringPlainTextPrep(mode: Mode) : Pair<String, String> {
+fun encryptDecryptStringInputTextPrep(mode: Mode) : Pair<String, String> {
     print(System.lineSeparator())
 
     when(mode) {
@@ -110,7 +132,7 @@ fun encryptDecryptStringPlainTextPrep(mode: Mode) : Pair<String, String> {
     return Pair(inputTextHex, initialKeyHex)
 }
 
-fun encryptDecryptHexPlainTextPrep(mode: Mode) : Pair<String, String> {
+fun encryptDecryptHexInputTextPrep(mode: Mode) : Pair<String, String> {
     print(System.lineSeparator())
 
     when(mode) {
@@ -123,7 +145,7 @@ fun encryptDecryptHexPlainTextPrep(mode: Mode) : Pair<String, String> {
     println()
 
     print("Please enter your key as a Hex Value: ")
-    val initialKey: String = readLine()!!
+    val initialKey: String = readLine()!!.replace("\\s".toRegex(), "")
 
     print(System.lineSeparator())
 
@@ -155,18 +177,24 @@ fun encryptDecryptHexPlainTextPrep(mode: Mode) : Pair<String, String> {
     return Pair(InputTextHex, initialKeyHex)
 }
 
-fun encrypt(plainTextBin: String, initialKeyBin: String) {
-    val cipherTextHex = aesEncrypt(plainTextBin, initialKeyBin)
+fun encrypt(plainTextHex: String, initialKeyHex: String) {
+    val cipherTextHex = aesEncrypt(plainTextHex, initialKeyHex)
     val cipherTextStr = convertHexToString(cipherTextHex)
 
     println("Final CipherText (Hex): ${cipherTextHex.chunked(2).joinToString(" ")}")
     println("Final CipherText (String): $cipherTextStr")
 }
 
-fun decrypt(cipherTextBin: String, initialKeyBin: String) {
-    val plainTextHex = aesDecrypt(cipherTextBin, initialKeyBin)
+fun decrypt(cipherTextHex: String, initialKeyHex: String) {
+    val plainTextHex = aesDecrypt(cipherTextHex, initialKeyHex)
     val plainTextStr = convertHexToString(plainTextHex)
 
     println("Final PlainText (Hex): ${plainTextHex.chunked(2).joinToString(" ")}")
     println("Final PlainText (String): $plainTextStr")
+}
+
+private class WrongMenuChoiceException : Exception() {
+    override fun toString(): String {
+        return this.javaClass.canonicalName + ": Invalid Choice!"
+    }
 }

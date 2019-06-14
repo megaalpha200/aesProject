@@ -1,7 +1,9 @@
+import hexmanip.fromHexToInt
 import hexmanip.hexadd
 import hexmanip.hexmod
 import hexmanip.hexor
 
+private const val NULL_CONSTANT = "NULL"
 val R_CONSTANTS = arrayOf(NULL_CONSTANT, "01000000", "02000000", "04000000", "08000000", "10000000", "20000000", "40000000", "80000000", "1B000000", "36000000")
 
 /*--------------------------------Boxes-------------------------------------*/
@@ -115,9 +117,9 @@ fun main() {
     //aesEncrypt("0123456789abcdeffedcba9876543210", "0f1571c947d9e8590cb7add6af7f6798")
 }
 
-fun aesEncrypt(plaintext: String, initialKey: String) : String {
-    val plaintextBlocks = plaintext.chunked(32) { it.padEnd(32, '0').toString() }
-    val paddedInitialKey = initialKey.padEnd(32, '0')
+fun aesEncrypt(plaintextHex: String, initialKeyHex: String) : String {
+    val plaintextBlocks = plaintextHex.chunked(32) { it.padEnd(32, '0').toString() }
+    val paddedInitialKey = initialKeyHex.padEnd(32, '0')
     val finalCipherTextList = arrayListOf<String>()
 
     plaintextBlocks.forEachIndexed { blockNum, block ->
@@ -136,10 +138,7 @@ fun aesEncrypt(plaintext: String, initialKey: String) : String {
             val tempRoundObject = RoundObject()
             tempRoundObject.preRoundState = if (roundStates[round - 1].isPreRound) roundStates[round - 1].preRoundState else roundStates[round - 1].addRoundKeyState
 
-            if (round == 10)
-                roundStates.add(roundFunction(Mode.ENCRYPT, tempRoundObject, roundKeys[round], false))
-            else
-                roundStates.add(roundFunction(Mode.ENCRYPT, tempRoundObject, roundKeys[round]))
+            roundStates.add(roundFunction(Mode.ENCRYPT, tempRoundObject, roundKeys[round], round != 10))
         }
 
         println(System.lineSeparator())
@@ -148,7 +147,7 @@ fun aesEncrypt(plaintext: String, initialKey: String) : String {
         println("Block State: ${block.chunked(2).joinToString(" ")}")
 
         println(System.lineSeparator())
-        displayRoundStates(roundStates, blockNum)
+        displayRoundStates(roundStates, blockNum, Mode.ENCRYPT)
 
         finalCipherTextList.add(roundStates[roundStates.lastIndex].addRoundKeyState)
     }
@@ -158,9 +157,9 @@ fun aesEncrypt(plaintext: String, initialKey: String) : String {
     return finalCipherTextList.joinToString("")
 }
 
-fun aesDecrypt(ciphertext: String, initialKey: String) : String {
-    val ciphertextBlocks = ciphertext.chunked(32) { it.padEnd(32, '0').toString() }
-    val paddedInitialKey = initialKey.padEnd(32, '0')
+fun aesDecrypt(ciphertextHex: String, initialKeyHex: String) : String {
+    val ciphertextBlocks = ciphertextHex.chunked(32) { it.padEnd(32, '0').toString() }
+    val paddedInitialKey = initialKeyHex.padEnd(32, '0')
     val finalPlainTextList = arrayListOf<String>()
 
     ciphertextBlocks.forEachIndexed { blockNum, block ->
@@ -195,7 +194,7 @@ fun aesDecrypt(ciphertext: String, initialKey: String) : String {
         println("Block State: ${block.chunked(2).joinToString(" ")}")
 
         println(System.lineSeparator())
-        displayRoundStates(roundStates, blockNum)
+        displayRoundStates(roundStates, blockNum, Mode.DECRYPT)
 
         finalPlainTextList.add(roundStates[roundStates.lastIndex].addRoundKeyState)
     }
@@ -205,17 +204,27 @@ fun aesDecrypt(ciphertext: String, initialKey: String) : String {
     return finalPlainTextList.joinToString("")
 }
 
-private fun displayRoundStates(roundStates: List<RoundObject>, blockNum: Int) {
+private fun displayRoundStates(roundStates: List<RoundObject>, blockNum: Int, mode: Mode) {
     roundStates.forEachIndexed { roundNum, roundObj ->
         println("For Block ${blockNum + 1}, Round $roundNum...")
 
         if (roundObj.isPreRound)
             println("After Pre-Round: ${roundObj.preRoundState.chunked(2).joinToString(" ")}")
         else {
-            println("After SubBytes: ${roundObj.subBytesState.chunked(2).joinToString(" ")}")
-            println("After ShiftRows: ${roundObj.shiftRowsState.chunked(2).joinToString(" ")}")
-            println("After MixColumns: ${roundObj.mixColumnsState.chunked(2).joinToString(" ")}")
-            println("After AddRoundKey: ${roundObj.addRoundKeyState.chunked(2).joinToString(" ")}")
+            when(mode) {
+                Mode.ENCRYPT -> {
+                    println("After SubBytes: ${roundObj.subBytesState.chunked(2).joinToString(" ")}")
+                    println("After ShiftRows: ${roundObj.shiftRowsState.chunked(2).joinToString(" ")}")
+                    println("After MixColumns: ${roundObj.mixColumnsState.chunked(2).joinToString(" ")}")
+                    println("After AddRoundKey: ${roundObj.addRoundKeyState.chunked(2).joinToString(" ")}")
+                }
+                Mode.DECRYPT -> {
+                    println("After InvShiftRows: ${roundObj.shiftRowsState.chunked(2).joinToString(" ")}")
+                    println("After InvSubBytes: ${roundObj.subBytesState.chunked(2).joinToString(" ")}")
+                    println("After AddRoundKey: ${roundObj.addRoundKeyState.chunked(2).joinToString(" ")}")
+                    println("After InvMixColumns: ${roundObj.mixColumnsState.chunked(2).joinToString(" ")}")
+                }
+            }
         }
 
         println(System.lineSeparator())
@@ -224,11 +233,11 @@ private fun displayRoundStates(roundStates: List<RoundObject>, blockNum: Int) {
 
 /*--------------------------------Round Functions-------------------------------------*/
 
-fun preRoundFunction(initialState: String, roundKey: String) : String {
+private fun preRoundFunction(initialState: String, roundKey: String) : String {
     return initialState hexor roundKey
 }
 
-fun roundFunction(mode: Mode, roundObj: RoundObject, roundKey: String, useMixCols: Boolean = true) : RoundObject {
+private fun roundFunction(mode: Mode, roundObj: RoundObject, roundKey: String, useMixCols: Boolean = true) : RoundObject {
     val mixColsConstant = when(mode) {
         Mode.ENCRYPT -> MIX_COLS_CONSTANT_MATRIX
         Mode.DECRYPT -> INV_MIX_COLS_CONSTANT_MATRIX
@@ -281,7 +290,7 @@ fun roundFunction(mode: Mode, roundObj: RoundObject, roundKey: String, useMixCol
     return roundObj
 }
 
-fun shiftRows(state: String, isInverse: Boolean = false) : String {
+private fun shiftRows(state: String, isInverse: Boolean = false) : String {
     val postShiftRowsStateList = arrayListOf<String>()
     val preShiftRowsState = rowColOrientStateWords(state).chunked(8)
 
@@ -295,7 +304,7 @@ fun shiftRows(state: String, isInverse: Boolean = false) : String {
     return rowColOrientStateWords(postShiftRowsStateList.joinToString(""))
 }
 
-fun rowColOrientStateWords(state: String) : String {
+private fun rowColOrientStateWords(state: String) : String {
     val rowColOrientedList = arrayListOf<String>()
     val chunkedState = state.chunked(8) { it.chunked(2) }
 
@@ -308,7 +317,7 @@ fun rowColOrientStateWords(state: String) : String {
     return rowColOrientedList.joinToString("")
 }
 
-fun mixColumns(state: String, mixConstant: Array<Array<String>>) : String {
+private fun mixColumns(state: String, mixConstant: Array<Array<String>>) : String {
     val resultState = arrayListOf<String>()
     val chunkedState = state.chunked(8)
 
@@ -319,7 +328,7 @@ fun mixColumns(state: String, mixConstant: Array<Array<String>>) : String {
     return resultState.joinToString("")
 }
 
-fun applyConstantMixCols(word: String, mixConstant: Array<Array<String>>) : String {
+private fun applyConstantMixCols(word: String, mixConstant: Array<Array<String>>) : String {
     val resultWord = arrayListOf<String>()
     val chunkedWord = word.chunked(2)
 
@@ -353,7 +362,7 @@ fun applyConstantMixCols(word: String, mixConstant: Array<Array<String>>) : Stri
 
 /*----------------------------------Key Functions-------------------------------------*/
 
-fun generateNextRoundKey(inputKey: String, roundConstant: String) : String {
+private fun generateNextRoundKey(inputKey: String, roundConstant: String) : String {
     val nextRoundKeyList = arrayListOf<String>()
 
     val chunkedInputKey = inputKey.chunked(8)
@@ -362,16 +371,14 @@ fun generateNextRoundKey(inputKey: String, roundConstant: String) : String {
     var lastWord = tWord
     chunkedInputKey.forEach { word ->
         val newWord = word hexor lastWord
-
         nextRoundKeyList.add(newWord)
-
         lastWord = newWord
     }
 
     return nextRoundKeyList.joinToString("")
 }
 
-fun generateTWord(lastWord: String, roundConstant: String) : String {
+private fun generateTWord(lastWord: String, roundConstant: String) : String {
     val rotatedLastWordFromInput = rotWordLeft(lastWord)
     val subLastWordListFromInput = subWord(rotatedLastWordFromInput)
 
@@ -424,6 +431,16 @@ fun subWord(word: String, useInverseSubBytes: Boolean = false) : String {
     }
 
     return subList.joinToString("")
+}
+
+fun applySBox(input: String, sBox: Array<Array<String>>) : String {
+    if (input.length != 2)
+        return NULL_CONSTANT
+
+    val boxRow = input[0].fromHexToInt()
+    val boxCol = input[1].fromHexToInt()
+
+    return sBox[boxRow][boxCol]
 }
 
 /*----------------------------------------------------------------------------------*/

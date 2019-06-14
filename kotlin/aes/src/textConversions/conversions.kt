@@ -32,7 +32,7 @@ fun convertBinToHex(input: String) : String {
         hexArrayList.add(BigInteger(bin, 2).toString(16))
     }
 
-    return hexArrayList.joinToString("") { it.capitalize() }
+    return hexArrayList.joinToString("") { it.toUpperCase() }
 }
 
 fun convertHexToString(input: String) : String {
