@@ -389,34 +389,24 @@ private fun generateTWord(lastWord: String, roundConstant: String) : String {
 
 /*--------------------------------AUX Functions-------------------------------------*/
 
-fun rotWordLeft(word: String, offset: Int = 1) : String {
-    val chunkedWord = word.chunked(2)
-    val rotatedList = arrayListOf<String>()
+fun rotWordLeft(word: String, offset: Int = 1): String {
+    val rotatedStr = StringBuilder("")
+    val modOffsetVal = offset * 2 % word.length
 
-    for (i in offset until chunkedWord.size) {
-        rotatedList.add(chunkedWord[i])
-    }
+    rotatedStr.append(word.substring(modOffsetVal))
+    rotatedStr.append(word.substring(0, modOffsetVal))
 
-    for (j in 0 until offset) {
-        rotatedList.add(chunkedWord[j])
-    }
-
-    return rotatedList.joinToString("")
+    return rotatedStr.toString()
 }
 
-fun rotWordRight(word: String, offset: Int = 1) : String {
-    val chunkedWord = word.chunked(2)
-    val rotatedList = arrayListOf<String>()
+fun rotWordRight(word: String, offset: Int = 1): String {
+    val rotatedStr = StringBuilder("")
+    val modOffsetVal = offset * 2 % word.length
 
-    for (j in chunkedWord.size - offset until chunkedWord.size) {
-        rotatedList.add(chunkedWord[j])
-    }
+    rotatedStr.append(word.substring(word.length - modOffsetVal))
+    rotatedStr.append(word.substring(0, word.length - modOffsetVal))
 
-    for (i in 0 until chunkedWord.size - offset) {
-        rotatedList.add(chunkedWord[i])
-    }
-
-    return rotatedList.joinToString("")
+    return rotatedStr.toString()
 }
 
 fun subWord(word: String, useInverseSubBytes: Boolean = false) : String {

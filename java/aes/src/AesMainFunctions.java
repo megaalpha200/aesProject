@@ -100,7 +100,7 @@ public class AesMainFunctions {
     }
 
     public static void main(String[] args) {
-        System.out.println(aesDecrypt("ff0b844a0853bf7c6934ab4364148fb9", "0f1571c947d9e8590cb7add6af7f6798"));
+        //System.out.println(aesDecrypt("ff0b844a0853bf7c6934ab4364148fb9", "0f1571c947d9e8590cb7add6af7f6798"));
     }
 
     public static String aesEncrypt(String plaintextHex, String initialKeyHex) {
@@ -382,33 +382,23 @@ public class AesMainFunctions {
     /*--------------------------------AUX Functions-------------------------------------*/
 
     public static String rotWordLeft(String word, int offset) {
-        final List<String> chunkedWord = StringManipulations.chunkString(word, 2);
-        final ArrayList<String> rotatedList = new ArrayList<>();
+        final StringBuilder rotatedStr = new StringBuilder();
+        int modOffsetVal = (offset*2) % word.length();
 
-        for (int i = offset; i < chunkedWord.size(); i++) {
-            rotatedList.add(chunkedWord.get(i));
-        }
+        rotatedStr.append(word.substring(modOffsetVal));
+        rotatedStr.append(word.substring(0, modOffsetVal));
 
-        for (int j = 0; j < offset; j++) {
-            rotatedList.add(chunkedWord.get(j));
-        }
-
-        return String.join("", rotatedList);
+        return rotatedStr.toString();
     }
 
     public static String rotWordRight(String word, int offset) {
-        final List<String> chunkedWord = StringManipulations.chunkString(word, 2);
-        final ArrayList<String> rotatedList = new ArrayList<>();
+        final StringBuilder rotatedStr = new StringBuilder();
+        int modOffsetVal = (offset*2) % word.length();
 
-        for (int j = chunkedWord.size() - offset; j < chunkedWord.size(); j++) {
-            rotatedList.add(chunkedWord.get(j));
-        }
+        rotatedStr.append(word.substring(word.length() - modOffsetVal));
+        rotatedStr.append(word.substring(0, word.length() - modOffsetVal));
 
-        for (int i = 0; i < chunkedWord.size() - offset; i++) {
-            rotatedList.add(chunkedWord.get(i));
-        }
-
-        return String.join("", rotatedList);
+        return rotatedStr.toString();
     }
 
     public static String subWord(String word, boolean useInverseSubBytes) {
