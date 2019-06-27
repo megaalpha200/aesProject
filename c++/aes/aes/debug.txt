@@ -1,363 +1,370 @@
-PlainText: I like computer class
+PlainText: texas southern university
 PlainText Hex and Binary Representations:
-Hex: 49 20 6c 69 6b 65 20 63 6f 6d 70 75 74 65 72 20 63 6c 61 73 73
-Binary: 01001001 00100000 01101100 01101001 01101011 01100101 00100000 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 00100000 01100011 01101100 01100001 01110011 01110011
+Hex: 74 65 78 61 73 20 73 6f 75 74 68 65 72 6e 20 75 6e 69 76 65 72 73 69 74 79
+Binary: 01110100 01100101 01111000 01100001 01110011 00100000 01110011 01101111 01110101 01110100 01101000 01100101 01110010 01101110 00100000 01110101 01101110 01101001 01110110 01100101 01110010 01110011 01101001 01110100 01111001
 
-Initial Key: Computer Science
+Initial Key: computer science rocks!
 Initial Key Hex and Binary Representations:
-Hex: 43 6f 6d 70 75 74 65 72 20 53 63 69 65 6e 63 65
-Binary: 01000011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 00100000 01010011 01100011 01101001 01100101 01101110 01100011 01100101
+Hex: 63 6f 6d 70 75 74 65 72 20 73 63 69 65 6e 63 65 20 72 6f 63 6b 73 21
+Binary: 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 00100000 01110011 01100011 01101001 01100101 01101110 01100011 01100101 00100000 01110010 01101111 01100011 01101011 01110011 00100001
 
-Round 1 Key: dd94203da8e0454f88b32626eddd4543
-Round 2 Key: 1efa3a68b61a7f273ea95901d3741c42
-Round 3 Key: 8866160e3e7c692900d53028d3a12c6a
-Round 4 Key: b21714688c6b7d418cbe4d695f1f6103
-Round 5 Key: 62f86fa7ee9312e6622d5f8f3d323e8c
-Round 6 Key: 614a0b808fd91966edf446e9d0c67865
-Round 7 Key: 95f646f01a2f5f96f7db197f271d611a
-Round 8 Key: b119e43cab36bbaa5ceda2d57bf0c3cf
-Round 9 Key: 26376e1d8d01d5b7d1ec7762aa1cb4ad
-Round 10 Key: 8cbafbb101bb2e06d05759647a4bedc9
+Round 1 Key: fd94203d88e0454fa8932626cdfd4543
+Round 2 Key: abfa3a80231a7fcf8b8959e946741caa
+Round 3 Key: 3d6696da1e7ce91595f5b0fcd381ac56
+Round 4 Key: 39f727bc278bcea9b27e7e5561ffd203
+Round 5 Key: 3f425c5318c992faaab7ecafcb483eac
+Round 6 Key: 4df0cd4c55395fb6ff8eb31934c68db5
+Round 7 Key: b9ad1854ec9447e2131af4fb27dc794e
+Round 8 Key: bf1b3798538f707a409584816749fdcf
+Round 9 Key: 9f4fbd1dccc0cd678c5549e6eb1cb429
+Round 10 Key: 35c218f4f902d59375579c759e4b285c
 
 
 For Block 1...
-Block State: 49 20 6c 69 6b 65 20 63 6f 6d 70 75 74 65 72 20
+Block State: 74 65 78 61 73 20 73 6f 75 74 68 65 72 6e 20 75
 
 For Block 1 Round 0...
-After Pre-Round: 0a 4f 01 19 1e 11 45 11 4f 3e 13 1c 11 0b 11 45
+After Pre-Round: 17 0a 15 11 06 54 16 1d 55 07 0b 0c 17 00 43 10
 
 For Block 1 Round 1...
-After SubBytes: 67 84 7c d4 72 82 6e 82 84 b2 7d 9c 82 2B 82 6e
-After ShiftRows: 67 82 7d 6e 72 b2 82 d4 84 2B 7c 82 82 84 6e 9c
-After MixColumns: 40 91 ad 8a 7f 44 b8 15 90 d4 ca df 7a bf 65 54
-After AddRoundKey: 9d 05 8d b7 d7 a4 fd 5a 18 67 ec f9 97 62 20 17
+After SubBytes: f0 67 59 82 6f 20 47 a4 fc c5 2B fe f0 63 1a ca
+After ShiftRows: f0 20 2B ca 6f c5 1a 82 fc 63 59 a4 f0 67 47 fe
+After MixColumns: 7a 07 c3 8f 12 52 03 71 bb 75 da 76 eb 09 00 cc
+After AddRoundKey: 87 93 e3 b2 9a b2 46 3e 13 e6 fc 50 26 f4 45 8f
 
 
 For Block 1 Round 2...
-After SubBytes: 5e 6b 5d a9 0e 49 54 be ad 85 ce 99 88 aa b7 f0
-After ShiftRows: 5e 49 ce f0 0e 85 b7 a9 ad aa 5d be 88 6b 54 99
-After MixColumns: 59 75 9b 9e 96 74 1e 69 47 bb 64 7c 7b 3b fb 95
-After AddRoundKey: 47 8f a1 f6 20 6e 61 4e 79 12 3d 7d a8 4f e7 d7
+After SubBytes: 17 dc 11 37 b8 37 5a b2 7d 8e b0 53 f7 bf 6e 73
+After ShiftRows: 17 37 b0 73 b8 8e 6e 37 7d bf 11 b2 f7 dc 5a 53
+After MixColumns: b4 c1 ce 58 bb 3a b3 5d 83 99 2d 56 83 e9 6a 22
+After AddRoundKey: 1f 3b f4 d8 98 20 cc 92 08 10 74 bf c5 9d 76 88
 
 
 For Block 1 Round 3...
-After SubBytes: a0 73 32 42 b7 9f ef 2f b6 c9 27 ff c2 84 94 0e
-After ShiftRows: a0 9f 27 0e b7 c9 94 42 b6 84 32 2f c2 73 ef ff
-After MixColumns: c8 e2 63 5f e3 db 8b 1b fd dc 27 29 1a f1 6e 24
-After AddRoundKey: 40 84 75 51 dd a7 e2 32 fd 09 17 01 c9 50 42 4e
+After SubBytes: c0 e2 bf 61 46 b7 4b 4f 30 ca 92 08 a6 5e 38 c4
+After ShiftRows: c0 b7 92 c4 46 ca 38 61 30 5e bf 4f a6 e2 4b 08
+After MixColumns: 0f dc 1f ed 90 e0 5f fa 72 19 da 2f 29 ac ca 48
+After AddRoundKey: 32 ba 89 37 8e 9c b6 ef e7 ec 6a d3 fa 2d 66 1e
 
 
 For Block 1 Round 4...
-After SubBytes: 09 5f 9d d1 c1 5c 98 23 54 01 f0 7c dd 53 2c 2f
-After ShiftRows: 09 5c f0 2f c1 01 2c d1 54 53 9d 23 dd 5f 98 7c
-After MixColumns: 29 95 df e9 67 66 f0 cc e3 6d 43 74 a4 ac 2d 43
-After AddRoundKey: 9b 82 cb 81 eb 0d 8d 8d 6f d3 0e 1d fb b3 4c 40
+After SubBytes: 23 f4 a7 9a 19 de 4e df 94 ce 02 66 2d d8 33 72
+After ShiftRows: 23 de 02 72 19 ce 33 9a 94 d8 a7 df 2d f4 4e 66
+After MixColumns: 4f f0 6f 5d d2 51 04 f9 38 12 63 7d 75 6a ef 01
+After AddRoundKey: 76 07 48 e1 f5 da ca 50 8a 6c 1d 28 14 95 3d 02
 
 
 For Block 1 Round 5...
-After SubBytes: 14 13 1f 0c e9 d7 5d 5d a8 66 ab a4 0f 6d 29 09
-After ShiftRows: 14 d7 ab 09 e9 66 29 0c a8 6d 1f 5d 0f 13 5d a4
-After MixColumns: e8 4e 95 52 46 52 c9 77 be 0e 1c 2b d2 6a 51 0c
-After AddRoundKey: 8a b6 fa f5 a8 c1 db 91 dc 23 43 a4 ef 58 6f 80
+After SubBytes: 38 c5 52 f8 e6 57 74 53 7e 50 a4 34 fa 2a 27 77
+After ShiftRows: 38 57 a4 77 e6 50 27 f8 7e 2a 52 53 fa c5 74 34
+After MixColumns: 5a 16 a5 55 f8 d7 eb ad 83 8f 05 5c fb c3 8b cc
+After AddRoundKey: 65 54 f9 06 e0 1e 79 57 29 38 e9 f3 30 8b b5 60
 
 
 For Block 1 Round 6...
-After SubBytes: 7e 4e 2d e6 c2 78 b9 81 86 26 1a 49 df 6a a8 cd
-After ShiftRows: 7e 78 1a cd c2 26 a8 e6 86 6a 2d 81 df 4e b9 49
-After MixColumns: a3 6d 7e 61 bb 8b 9e 04 05 a4 2e cf 87 da 23 1f
-After AddRoundKey: c2 27 75 e1 34 52 87 62 e8 50 68 26 57 1c 5b 7a
+After SubBytes: 4d 20 99 6f e1 72 b6 5b a5 07 1e 0d 04 3d d5 d0
+After ShiftRows: 4d 72 1e d0 e1 07 d5 6f a5 3d 99 5b 04 20 b6 0d
+After MixColumns: c2 5b 68 00 6a e4 e6 34 d4 34 5c e6 d3 88 44 80
+After AddRoundKey: 8f ab a5 4c 3f dd b9 82 2b ba ef ff e7 4e c9 35
 
 
 For Block 1 Round 7...
-After SubBytes: 25 cc 9d f8 18 00 17 aa 9b 53 45 f7 5b 9c 39 da
-After ShiftRows: 25 00 45 da 18 53 39 f8 9b 9c 9d aa 5b cc 17 f7
-After MixColumns: d5 30 da 85 04 0d 2a a9 a5 ae c3 f8 19 16 bb c3
-After AddRoundKey: 40 c6 9c 75 1e 22 75 3f 52 75 da 87 3e 0b da d9
+After SubBytes: 73 62 06 29 75 c1 56 13 f1 f4 df 16 94 2f dd 96
+After ShiftRows: 73 c1 df 96 75 f4 dd 29 f1 2f 06 13 94 62 56 16
+After MixColumns: f7 06 b6 bc 19 d3 5b e4 9d b6 e7 07 d5 bc 60 bf
+After AddRoundKey: 4e ab ae e8 f5 47 1c 06 8e ac 13 fc f2 60 19 f1
 
 
 For Block 1 Round 8...
-After SubBytes: 09 b4 de 9d 72 93 9d 75 00 9d 57 17 b2 2B 57 35
-After ShiftRows: 09 93 57 35 72 9d 57 9d 00 2B de 75 b2 b4 9d 17
-After MixColumns: de f8 6b b5 92 37 fd 7d d6 5a 13 1f 32 6a 1e ca
-After AddRoundKey: 6f e1 8f 89 39 01 46 d7 8a b7 b1 ca 49 9a dd 05
+After SubBytes: 2f 62 e4 9b e6 a0 9c 6f 19 91 7d b0 89 d0 d4 a1
+After ShiftRows: 2f a0 7d a1 e6 91 d4 9b 19 d0 e4 6f 89 62 9c b0
+After MixColumns: 79 52 8d f5 30 23 72 59 d2 fa ab c1 83 42 03 05
+After AddRoundKey: c6 49 ba 6d 63 ac 02 23 92 6f 2f 40 e4 0b fe ca
 
 
 For Block 1 Round 9...
-After SubBytes: a8 f8 73 a7 12 7c 5a 0e 7e a9 c8 74 3b b8 c1 6b
-After ShiftRows: a8 7c c8 6b 12 a9 c1 a7 7e b8 73 0e 3b f8 5a 74
-After MixColumns: 6c 78 e2 81 a2 a4 d0 0b 52 8e 32 55 4b 4a eb 07
-After AddRoundKey: 4a 4f 8c 9c 2f a5 05 bc 83 62 45 37 e1 56 5f aa
+After SubBytes: b4 3b f4 3c fb 91 77 26 4f a8 15 09 69 2B bb 74
+After ShiftRows: b4 91 15 74 fb a8 bb 3c 4f 2B f4 26 69 3b 77 09
+After MixColumns: ba c6 93 ab 89 5a 7a 7d 31 38 fd 42 e1 8f a7 e5
+After AddRoundKey: 25 89 2e b6 45 9a b7 1a bd 6d b4 a4 0a 93 13 cc
 
 
 For Block 1 Round 10...
-After SubBytes: d6 84 64 de 15 06 6b 65 ec aa 6e 9a f8 b1 cf ac
-After ShiftRows: d6 06 6e ac 15 aa cf de ec b1 64 65 f8 84 6b 9a
+After SubBytes: 3f a7 31 4e 6e b8 a9 a2 7a 3c 8d 49 67 dc 7d 4b
+After ShiftRows: 3f b8 8d 4b 6e 3c 7d 4e 7a dc 31 a2 67 a7 a9 49
 After MixColumns: 
-After AddRoundKey: 5a bc 95 1d 14 11 e1 d8 3c e6 3d 01 82 cf 86 53
+After AddRoundKey: 0a 7a 95 bf 97 3e a8 dd 0f 8b ad d7 f9 ec 81 15
 
 
-Round 1 Key: dd94203da8e0454f88b32626eddd4543
-Round 2 Key: 1efa3a68b61a7f273ea95901d3741c42
-Round 3 Key: 8866160e3e7c692900d53028d3a12c6a
-Round 4 Key: b21714688c6b7d418cbe4d695f1f6103
-Round 5 Key: 62f86fa7ee9312e6622d5f8f3d323e8c
-Round 6 Key: 614a0b808fd91966edf446e9d0c67865
-Round 7 Key: 95f646f01a2f5f96f7db197f271d611a
-Round 8 Key: b119e43cab36bbaa5ceda2d57bf0c3cf
-Round 9 Key: 26376e1d8d01d5b7d1ec7762aa1cb4ad
-Round 10 Key: 8cbafbb101bb2e06d05759647a4bedc9
+Round 1 Key: fd94203d88e0454fa8932626cdfd4543
+Round 2 Key: abfa3a80231a7fcf8b8959e946741caa
+Round 3 Key: 3d6696da1e7ce91595f5b0fcd381ac56
+Round 4 Key: 39f727bc278bcea9b27e7e5561ffd203
+Round 5 Key: 3f425c5318c992faaab7ecafcb483eac
+Round 6 Key: 4df0cd4c55395fb6ff8eb31934c68db5
+Round 7 Key: b9ad1854ec9447e2131af4fb27dc794e
+Round 8 Key: bf1b3798538f707a409584816749fdcf
+Round 9 Key: 9f4fbd1dccc0cd678c5549e6eb1cb429
+Round 10 Key: 35c218f4f902d59375579c759e4b285c
 
 
 For Block 2...
-Block State: 63 6c 61 73 73 00 00 00 00 00 00 00 00 00 00 00
+Block State: 6e 69 76 65 72 73 69 74 79 00 00 00 00 00 00 00
 
 For Block 2 Round 0...
-After Pre-Round: 20 03 0c 03 06 74 65 72 20 53 63 69 65 6e 63 65
+After Pre-Round: 0d 06 1b 15 07 07 0c 06 59 73 63 69 65 6e 63 65
 
 For Block 2 Round 1...
-After SubBytes: b7 7b fe 7b 6f 92 4d 40 b7 ed fb f9 4d 9f fb 4d
-After ShiftRows: b7 92 fb 4d 6f ed fb 7b b7 9f fe 40 4d 7b 4d f9
-After MixColumns: 6e d3 1f 31 72 c3 e2 51 71 cb 0f 23 a3 95 bc 08
-After AddRoundKey: b3 47 3f 0c da 23 a7 1e f9 78 29 05 4e 48 f9 4b
+After SubBytes: d7 6f af 59 c5 c5 fe 6f cb 8f fb f9 4d 9f fb 4d
+After ShiftRows: d7 c5 fb 4d c5 8f fb 59 cb 9f af 6f 4d 6f fe f9
+After MixColumns: 57 1d 28 c6 b9 8f 4c 92 f7 6b a0 a8 2c 73 d5 af
+After AddRoundKey: aa 89 08 fb 31 6f 09 dd 5f f8 86 8e e1 8e 90 ec
 
 
 For Block 2 Round 2...
-After SubBytes: 6d a0 75 fe 57 26 5c 72 99 bc a5 6b 2f 52 99 b3
-After ShiftRows: 6d 26 a5 b3 57 bc 99 fe 99 52 75 72 2f a0 5c 6b
-After MixColumns: a6 66 d4 49 16 7a db 3b d8 d0 b7 73 92 fb 8a 5b
-After AddRoundKey: b8 9c ee 21 a0 60 a4 1c e6 79 ee 72 41 8f 96 19
+After SubBytes: ac a7 30 0f c7 a8 01 c1 cf 41 44 19 f8 19 60 ce
+After ShiftRows: ac a8 44 ce c7 41 60 0f cf 19 30 c1 f8 a7 01 19
+After MixColumns: 2a e5 c5 84 39 ea 57 6d 5f 6c ee fa 01 b7 76 87
+After AddRoundKey: 81 1f ff 04 1a f0 28 a2 d4 e5 b7 13 47 c3 6a 2d
 
 
 For Block 2 Round 3...
-After SubBytes: 6c de 28 fd e0 d0 49 9c 8e b6 28 40 83 73 90 d4
-After ShiftRows: 6c d0 28 d4 e0 b6 90 fd 8e 73 28 9c 83 de 49 40
-After MixColumns: 4f 7b 8b ff 77 c1 71 fc 26 8c 12 f1 6d bf 0f 89
-After AddRoundKey: c7 1d 9d f1 49 bd 18 d5 26 59 22 d9 be 1e 23 e3
+After SubBytes: 0c c0 16 f2 a2 8c 34 3a 48 d9 a9 7d a0 2e 02 d8
+After ShiftRows: 0c 8c a9 d8 a2 d9 02 f2 48 2e 16 3a a0 c0 34 7d
+After MixColumns: e6 37 ba 9a df ff 72 d9 ce 14 04 94 49 1a 8f f5
+After AddRoundKey: db 51 2c 40 c1 83 9b cc 5b e1 b4 68 9a 9b 23 a3
 
 
 For Block 2 Round 4...
-After SubBytes: c6 a4 5e a1 3b 7a ad 03 f7 cb 93 35 ae 72 26 11
-After ShiftRows: c6 7a 93 11 3b cb 26 a1 f7 72 5e 03 ae a4 ad 35
-After MixColumns: 9b 8d b2 9a b7 7d 44 f9 3e f2 3c 28 28 24 14 8a
-After AddRoundKey: 29 9a a6 f2 3b 16 39 b8 b2 4c 71 41 77 3b 75 89
+After SubBytes: b9 d1 71 09 78 ec 14 4b 39 f8 8d 45 b8 14 26 0a
+After ShiftRows: b9 ec 8d 0a 78 f8 26 09 39 14 71 4b b8 d1 14 45
+After MixColumns: c1 fc 4a a5 cc f0 d7 44 74 c9 12 b8 52 78 8e 9c
+After AddRoundKey: f8 0b 6d 19 eb 7b 19 ed c6 b7 6c ed 33 87 5c 9f
 
 
 For Block 2 Round 5...
-After SubBytes: a5 b8 24 89 e2 47 12 6c 37 29 a3 83 f5 e2 9d a7
-After ShiftRows: a5 47 a3 a7 e2 29 9d 89 37 e2 24 6c f5 b8 12 83
-After MixColumns: 9c 72 4d 45 b0 85 6a 80 1b e8 29 47 b3 2b f7 b3
-After AddRoundKey: fe 8a 22 e2 5e 16 78 66 79 c5 76 c8 8e 19 c9 3f
+After SubBytes: 41 2B 3c d4 e9 21 d4 55 b4 a9 50 55 c3 17 4a db
+After ShiftRows: 41 21 50 db e9 a9 4a d4 b4 17 3c 55 c3 2B d4 55
+After MixColumns: 6a 28 b6 1f b7 aa b3 70 23 8b 24 46 61 a7 a4 0b
+After AddRoundKey: 55 6a ea 4c af 63 21 8a 89 3c c8 e9 aa ef 9a a7
 
 
 For Block 2 Round 6...
-After SubBytes: bb 7e 93 98 58 47 bc 33 b6 a6 38 e8 19 d4 dd 75
-After ShiftRows: bb 47 38 75 58 a6 dd 98 b6 d4 93 33 19 7e bc e8
-After MixColumns: e9 08 13 43 04 eb ec b8 b0 98 0a e0 e4 d2 27 22
-After AddRoundKey: 88 42 18 c3 8b 32 f5 de 5d 6c 4c 09 34 14 5f 47
+After SubBytes: fc 02 87 29 79 fb fd 7e a7 eb e8 1e ac df b8 5c
+After ShiftRows: fc fb e8 5c 79 eb b8 29 a7 df 87 7e ac 02 fd 1e
+After MixColumns: 41 6e 28 b4 45 4e 82 8a d6 ee ef 56 a6 aa 6d 2c
+After AddRoundKey: 0c 9e e5 f8 10 77 dd 3c 29 60 5c 4f 92 6c e0 99
 
 
 For Block 2 Round 7...
-After SubBytes: c4 2c ad 2e 3d 23 e6 1d 4c 50 29 01 18 fa cf a0
-After ShiftRows: c4 23 29 a0 3d 50 cf 2e 4c fa ad 1d 18 2c e6 01
-After MixColumns: 7f 59 4e 06 6b f9 9a 84 3d 52 d0 b9 a3 70 e0 e0
-After AddRoundKey: ea af 08 f6 71 d6 c5 12 ca 89 c9 c6 84 6d 81 fa
+After SubBytes: fe 0b d9 41 ca f5 c1 eb a5 d0 4a 84 4f 50 e1 ee
+After ShiftRows: fe f5 4a ee ca d0 e1 41 a5 50 d9 eb 4f 0b c1 84
+After MixColumns: 47 3f b6 61 44 08 00 f6 93 9e 7a b0 c6 85 4a 08
+After AddRoundKey: fe 92 ae 35 a8 9c 47 14 80 84 8e 4b e1 59 33 46
 
 
 For Block 2 Round 8...
-After SubBytes: 87 79 30 42 a3 f6 a6 c9 74 a7 dd b4 5f 3c 0c 2d
-After ShiftRows: 87 f6 dd 2d a3 a7 0c 42 74 3c 30 c9 5f 79 a6 b4
-After MixColumns: e4 21 a7 e3 e1 a0 da d1 55 95 68 19 27 e8 b6 4d
-After AddRoundKey: 55 38 43 df 4a 96 61 7b 09 78 ca cc 5c 18 75 82
+After SubBytes: bb 4f e4 96 c2 de a0 fa cd 5f 19 b3 f8 cb c3 5a
+After ShiftRows: bb de 19 5a c2 5f c3 96 cd cb e4 fa f8 4f a0 b3
+After MixColumns: 57 6d b9 a5 2b b4 a1 f6 d9 8d c0 8c 29 2e 22 81
+After AddRoundKey: e8 76 8e 3d 78 3b d1 8c 99 18 44 0d 4e 67 df 4e
 
 
 For Block 2 Round 9...
-After SubBytes: fc 07 1a 9e d6 90 ef 21 01 bc 74 4b 4a ad 9d 13
-After ShiftRows: fc 90 74 13 d6 bc 9d 9e 01 ad 1a 21 4a 07 ef 4b
-After MixColumns: 2f 48 b1 dd 6b 97 f2 67 d5 4f fb f6 39 25 55 a0
-After AddRoundKey: 09 7f df c0 e6 96 27 d0 04 a3 8c 94 93 39 e1 0d
+After SubBytes: 9b 38 19 27 bc e2 3e 64 ee ad 1b d7 2f 85 9e 2f
+After ShiftRows: 9b e2 1b 2f bc ad 9e 27 ee 85 19 64 2f 38 3e d7
+After MixColumns: 24 46 3e 11 36 63 5f a2 2e b0 f5 7d ff ca 09 c2
+After AddRoundKey: bb 09 83 0c fa a3 92 c5 a2 e5 bc 9b 14 d6 bd eb
 
 
 For Block 2 Round 10...
-After SubBytes: 01 d2 9e ba 8e 90 cc 70 f2 0a 64 22 dc 12 f8 d7
-After ShiftRows: 01 90 64 d7 8e 0a f8 ba f2 12 9e 70 dc d2 cc 22
+After SubBytes: ea 01 ec fe 2d 0a 4f a6 3a d9 65 14 fa f6 7a e9
+After ShiftRows: ea 0a 65 e9 2d d9 7a fe 3a f6 ec a6 fa 01 4f 14
 After MixColumns: 
-After AddRoundKey: 8d 2a 9f 66 8f b1 d6 bc 22 45 c7 14 a6 99 21 eb
+After AddRoundKey: df c8 7d 1d d4 db af 6d 4f a1 70 d3 64 4a 67 48
 
 
-Final CipherText (Hex): 5a bc 95 1d 14 11 e1 d8 3c e6 3d 01 82 cf 86 53 8d 2a 9f 66 8f b1 d6 bc 22 45 c7 14 a6 99 21 eb
-Final CipherText (String): Zºï·ÿ<Ê=ÇœÜSç*üfè±÷º"E«¶ô!Î
+Final CipherText (Hex): 0a 7a 95 bf 97 3e a8 dd 0f 8b ad d7 f9 ec 81 15 df c8 7d 1d d4 db af 6d 4f a1 70 d3 64 4a 67 48
+Final CipherText (String): 
+zïøó>®›ã≠◊˘ÏÅﬂ»}‘€ØmO°p”dJgH
 
 
 
 
-CipherText: 5abc951d1411e1d83ce63d0182cf86538d2a9f668fb1d6bc2245c714a69921eb
+CipherText: FinalCipherText(Hex):0a7a95bf973ea8dd0f8badd7f9ec8115dfc87d
 CipherText Hex and Binary Representations:
-Hex: 5a bc 95 1d 14 11 e1 d8 3c e6 3d 01 82 cf 86 53 8d 2a 9f 66 8f b1 d6 bc 22 45 c7 14 a6 99 21 eb
-Binary: 01011010 10111100 10010101 00011101 00010100 00010001 11100001 11011000 00111100 11100110 00111101 00000001 10000010 11001111 10000110 01010011 10001101 00101010 10011111 01100110 10001111 10110001 11010110 10111100 00100010 01000101 11000111 00010100 10100110 10011001 00100001 11101011
 
-Initial Key: 436f6d707574657220536369656e6365
+
+
+
+CipherText: 0a7a95bf973ea8dd0f8badd7f9ec8115dfc87d1dd4dbaf6d4fa170d3644a6748
+CipherText Hex and Binary Representations:
+Hex: 0a 7a 95 bf 97 3e a8 dd 0f 8b ad d7 f9 ec 81 15 df c8 7d 1d d4 db af 6d 4f a1 70 d3 64 4a 67 48
+Binary: 00001010 01111010 10010101 10111111 10010111 00111110 10101000 11011101 00001111 10001011 10101101 11010111 11111001 11101100 10000001 00010101 11011111 11001000 01111101 00011101 11010100 11011011 10101111 01101101 01001111 10100001 01110000 11010011 01100100 01001010 01100111 01001000
+
+Initial Key: 636f6d707574657220736369656e636520726f636b7321
 Initial Key Hex and Binary Representations:
-Hex: 43 6f 6d 70 75 74 65 72 20 53 63 69 65 6e 63 65
-Binary: 01000011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 00100000 01010011 01100011 01101001 01100101 01101110 01100011 01100101
+Hex: 63 6f 6d 70 75 74 65 72 20 73 63 69 65 6e 63 65 20 72 6f 63 6b 73 21
+Binary: 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 00100000 01110011 01100011 01101001 01100101 01101110 01100011 01100101 00100000 01110010 01101111 01100011 01101011 01110011 00100001
 
-Round 1 Key: 26376e1d8d01d5b7d1ec7762aa1cb4adRound 2 Key: b119e43cab36bbaa5ceda2d57bf0c3cfRound 3 Key: 95f646f01a2f5f96f7db197f271d611aRound 4 Key: 614a0b808fd91966edf446e9d0c67865Round 5 Key: 62f86fa7ee9312e6622d5f8f3d323e8cRound 6 Key: b21714688c6b7d418cbe4d695f1f6103Round 7 Key: 8866160e3e7c692900d53028d3a12c6aRound 8 Key: 1efa3a68b61a7f273ea95901d3741c42Round 9 Key: dd94203da8e0454f88b32626eddd4543Round 10 Key: 436f6d707574657220536369656e6365
+Round 1 Key: 9f4fbd1dccc0cd678c5549e6eb1cb429Round 2 Key: bf1b3798538f707a409584816749fdcfRound 3 Key: b9ad1854ec9447e2131af4fb27dc794eRound 4 Key: 4df0cd4c55395fb6ff8eb31934c68db5Round 5 Key: 3f425c5318c992faaab7ecafcb483eacRound 6 Key: 39f727bc278bcea9b27e7e5561ffd203Round 7 Key: 3d6696da1e7ce91595f5b0fcd381ac56Round 8 Key: abfa3a80231a7fcf8b8959e946741caaRound 9 Key: fd94203d88e0454fa8932626cdfd4543Round 10 Key: 636f6d707574657220736369656e6365
 
 For Block 1...
-Block State: 5a bc 95 1d 14 11 e1 d8 3c e6 3d 01 82 cf 86 53
+Block State: 0a 7a 95 bf 97 3e a8 dd 0f 8b ad d7 f9 ec 81 15
 
 For Block 1 Round 0...
-After Pre-Round: d6 06 6e ac 15 aa cf de ec b1 64 65 f8 84 6b 9a
+After Pre-Round: 3f b8 8d 4b 6e 3c 7d 4e 7a dc 31 a2 67 a7 a9 49
 
 For Block 1 Round 1...
-After InvShiftRows: d6 84 64 de 15 06 6b 65 ec aa 6e 9a f8 b1 cf ac
-After InvSubBytes: 4a 4f 8c 9c 2f a5 05 bc 83 62 45 37 e1 56 5f aa
-After AddRoundKey: 6c 78 e2 81 a2 a4 d0 0b 52 8e 32 55 4b 4a eb 07
-After InvMixColumns: a8 7c c8 6b 12 a9 c1 a7 7e b8 73 0e 3b f8 5a 74
+After InvShiftRows: 3f a7 31 4e 6e b8 a9 a2 7a 3c 8d 49 67 dc 7d 4b
+After InvSubBytes: 25 89 2e b6 45 9a b7 1a bd 6d b4 a4 0a 93 13 cc
+After AddRoundKey: ba c6 93 ab 89 5a 7a 7d 31 38 fd 42 e1 8f a7 e5
+After InvMixColumns: b4 91 15 74 fb a8 bb 3c 4f 2b f4 26 69 3b 77 09
 
 
 For Block 1 Round 2...
-After InvShiftRows: a8 f8 73 a7 12 7c 5a 0e 7e a9 c8 74 3b b8 c1 6b
-After InvSubBytes: 6f e1 8f 89 39 01 46 d7 8a b7 b1 ca 49 9a dd 05
-After AddRoundKey: de f8 6b b5 92 37 fd 7d d6 5a 13 1f 32 6a 1e ca
-After InvMixColumns: 09 93 57 35 72 9d 57 9d 00 2b de 75 b2 b4 9d 17
+After InvShiftRows: b4 3b f4 3c fb 91 77 26 4f a8 15 09 69 2b bb 74
+After InvSubBytes: c6 49 ba 6d 63 ac 02 23 92 6f 2f 40 e4 0b fe ca
+After AddRoundKey: 79 52 8d f5 30 23 72 59 d2 fa ab c1 83 42 03 05
+After InvMixColumns: 2f a0 7d a1 e6 91 d4 9b 19 d0 e4 6f 89 62 9c b0
 
 
 For Block 1 Round 3...
-After InvShiftRows: 09 b4 de 9d 72 93 9d 75 00 9d 57 17 b2 2b 57 35
-After InvSubBytes: 40 c6 9c 75 1e 22 75 3f 52 75 da 87 3e 0b da d9
-After AddRoundKey: d5 30 da 85 04 0d 2a a9 a5 ae c3 f8 19 16 bb c3
-After InvMixColumns: 25 00 45 da 18 53 39 f8 9b 9c 9d aa 5b cc 17 f7
+After InvShiftRows: 2f 62 e4 9b e6 a0 9c 6f 19 91 7d b0 89 d0 d4 a1
+After InvSubBytes: 4e ab ae e8 f5 47 1c 06 8e ac 13 fc f2 60 19 f1
+After AddRoundKey: f7 06 b6 bc 19 d3 5b e4 9d b6 e7 07 d5 bc 60 bf
+After InvMixColumns: 73 c1 df 96 75 f4 dd 29 f1 2f 06 13 94 62 56 16
 
 
 For Block 1 Round 4...
-After InvShiftRows: 25 cc 9d f8 18 00 17 aa 9b 53 45 f7 5b 9c 39 da
-After InvSubBytes: c2 27 75 e1 34 52 87 62 e8 50 68 26 57 1c 5b 7a
-After AddRoundKey: a3 6d 7e 61 bb 8b 9e 04 05 a4 2e cf 87 da 23 1f
-After InvMixColumns: 7e 78 1a cd c2 26 a8 e6 86 6a 2d 81 df 4e b9 49
+After InvShiftRows: 73 62 06 29 75 c1 56 13 f1 f4 df 16 94 2f dd 96
+After InvSubBytes: 8f ab a5 4c 3f dd b9 82 2b ba ef ff e7 4e c9 35
+After AddRoundKey: c2 5b 68 00 6a e4 e6 34 d4 34 5c e6 d3 88 44 80
+After InvMixColumns: 4d 72 1e d0 e1 07 d5 6f a5 3d 99 5b 04 20 b6 0d
 
 
 For Block 1 Round 5...
-After InvShiftRows: 7e 4e 2d e6 c2 78 b9 81 86 26 1a 49 df 6a a8 cd
-After InvSubBytes: 8a b6 fa f5 a8 c1 db 91 dc 23 43 a4 ef 58 6f 80
-After AddRoundKey: e8 4e 95 52 46 52 c9 77 be 0e 1c 2b d2 6a 51 0c
-After InvMixColumns: 14 d7 ab 09 e9 66 29 0c a8 6d 1f 5d 0f 13 5d a4
+After InvShiftRows: 4d 20 99 6f e1 72 b6 5b a5 07 1e 0d 04 3d d5 d0
+After InvSubBytes: 65 54 f9 06 e0 1e 79 57 29 38 e9 f3 30 8b b5 60
+After AddRoundKey: 5a 16 a5 55 f8 d7 eb ad 83 8f 05 5c fb c3 8b cc
+After InvMixColumns: 38 57 a4 77 e6 50 27 f8 7e 2a 52 53 fa c5 74 34
 
 
 For Block 1 Round 6...
-After InvShiftRows: 14 13 1f 0c e9 d7 5d 5d a8 66 ab a4 0f 6d 29 09
-After InvSubBytes: 9b 82 cb 81 eb 0d 8d 8d 6f d3 0e 1d fb b3 4c 40
-After AddRoundKey: 29 95 df e9 67 66 f0 cc e3 6d 43 74 a4 ac 2d 43
-After InvMixColumns: 09 5c f0 2f c1 01 2c d1 54 53 9d 23 dd 5f 98 7c
+After InvShiftRows: 38 c5 52 f8 e6 57 74 53 7e 50 a4 34 fa 2a 27 77
+After InvSubBytes: 76 07 48 e1 f5 da ca 50 8a 6c 1d 28 14 95 3d 02
+After AddRoundKey: 4f f0 6f 5d d2 51 04 f9 38 12 63 7d 75 6a ef 01
+After InvMixColumns: 23 de 02 72 19 ce 33 9a 94 d8 a7 df 2d f4 4e 66
 
 
 For Block 1 Round 7...
-After InvShiftRows: 09 5f 9d d1 c1 5c 98 23 54 01 f0 7c dd 53 2c 2f
-After InvSubBytes: 40 84 75 51 dd a7 e2 32 fd 09 17 01 c9 50 42 4e
-After AddRoundKey: c8 e2 63 5f e3 db 8b 1b fd dc 27 29 1a f1 6e 24
-After InvMixColumns: a0 9f 27 0e b7 c9 94 42 b6 84 32 2f c2 73 ef ff
+After InvShiftRows: 23 f4 a7 9a 19 de 4e df 94 ce 02 66 2d d8 33 72
+After InvSubBytes: 32 ba 89 37 8e 9c b6 ef e7 ec 6a d3 fa 2d 66 1e
+After AddRoundKey: 0f dc 1f ed 90 e0 5f fa 72 19 da 2f 29 ac ca 48
+After InvMixColumns: c0 b7 92 c4 46 ca 38 61 30 5e bf 4f a6 e2 4b 08
 
 
 For Block 1 Round 8...
-After InvShiftRows: a0 73 32 42 b7 9f ef 2f b6 c9 27 ff c2 84 94 0e
-After InvSubBytes: 47 8f a1 f6 20 6e 61 4e 79 12 3d 7d a8 4f e7 d7
-After AddRoundKey: 59 75 9b 9e 96 74 1e 69 47 bb 64 7c 7b 3b fb 95
-After InvMixColumns: 5e 49 ce f0 0e 85 b7 a9 ad aa 5d be 88 6b 54 99
+After InvShiftRows: c0 e2 bf 61 46 b7 4b 4f 30 ca 92 08 a6 5e 38 c4
+After InvSubBytes: 1f 3b f4 d8 98 20 cc 92 08 10 74 bf c5 9d 76 88
+After AddRoundKey: b4 c1 ce 58 bb 3a b3 5d 83 99 2d 56 83 e9 6a 22
+After InvMixColumns: 17 37 b0 73 b8 8e 6e 37 7d bf 11 b2 f7 dc 5a 53
 
 
 For Block 1 Round 9...
-After InvShiftRows: 5e 6b 5d a9 0e 49 54 be ad 85 ce 99 88 aa b7 f0
-After InvSubBytes: 9d 05 8d b7 d7 a4 fd 5a 18 67 ec f9 97 62 20 17
-After AddRoundKey: 40 91 ad 8a 7f 44 b8 15 90 d4 ca df 7a bf 65 54
-After InvMixColumns: 67 82 7d 6e 72 b2 82 d4 84 2b 7c 82 82 84 6e 9c
+After InvShiftRows: 17 dc 11 37 b8 37 5a b2 7d 8e b0 53 f7 bf 6e 73
+After InvSubBytes: 87 93 e3 b2 9a b2 46 3e 13 e6 fc 50 26 f4 45 8f
+After AddRoundKey: 7a 07 c3 8f 12 52 03 71 bb 75 da 76 eb 09 00 cc
+After InvMixColumns: f0 20 2b ca 6f c5 1a 82 fc 63 59 a4 f0 67 47 fe
 
 
 For Block 1 Round 10...
-After InvShiftRows: 67 84 7c d4 72 82 6e 82 84 b2 7d 9c 82 2b 82 6e
-After InvSubBytes: 0a 4f 01 19 1e 11 45 11 4f 3e 13 1c 11 0b 11 45
-After AddRoundKey: 49 20 6c 69 6b 65 20 63 6f 6d 70 75 74 65 72 20
+After InvShiftRows: f0 67 59 82 6f 20 47 a4 fc c5 2b fe f0 63 1a ca
+After InvSubBytes: 17 0a 15 11 06 54 16 1d 55 07 0b 0c 17 00 43 10
+After AddRoundKey: 74 65 78 61 73 20 73 6f 75 74 68 65 72 6e 20 75
 After InvMixColumns: 
 
 
-Round 1 Key: 26376e1d8d01d5b7d1ec7762aa1cb4adRound 2 Key: b119e43cab36bbaa5ceda2d57bf0c3cfRound 3 Key: 95f646f01a2f5f96f7db197f271d611aRound 4 Key: 614a0b808fd91966edf446e9d0c67865Round 5 Key: 62f86fa7ee9312e6622d5f8f3d323e8cRound 6 Key: b21714688c6b7d418cbe4d695f1f6103Round 7 Key: 8866160e3e7c692900d53028d3a12c6aRound 8 Key: 1efa3a68b61a7f273ea95901d3741c42Round 9 Key: dd94203da8e0454f88b32626eddd4543Round 10 Key: 436f6d707574657220536369656e6365
+Round 1 Key: 9f4fbd1dccc0cd678c5549e6eb1cb429Round 2 Key: bf1b3798538f707a409584816749fdcfRound 3 Key: b9ad1854ec9447e2131af4fb27dc794eRound 4 Key: 4df0cd4c55395fb6ff8eb31934c68db5Round 5 Key: 3f425c5318c992faaab7ecafcb483eacRound 6 Key: 39f727bc278bcea9b27e7e5561ffd203Round 7 Key: 3d6696da1e7ce91595f5b0fcd381ac56Round 8 Key: abfa3a80231a7fcf8b8959e946741caaRound 9 Key: fd94203d88e0454fa8932626cdfd4543Round 10 Key: 636f6d707574657220736369656e6365
 
 For Block 2...
-Block State: 8d 2a 9f 66 8f b1 d6 bc 22 45 c7 14 a6 99 21 eb
+Block State: df c8 7d 1d d4 db af 6d 4f a1 70 d3 64 4a 67 48
 
 For Block 2 Round 0...
-After Pre-Round: 01 90 64 d7 8e 0a f8 ba f2 12 9e 70 dc d2 cc 22
+After Pre-Round: ea 0a 65 e9 2d d9 7a fe 3a f6 ec a6 fa 01 4f 14
 
 For Block 2 Round 1...
-After InvShiftRows: 01 d2 9e ba 8e 90 cc 70 f2 0a 64 22 dc 12 f8 d7
-After InvSubBytes: 09 7f df c0 e6 96 27 d0 04 a3 8c 94 93 39 e1 0d
-After AddRoundKey: 2f 48 b1 dd 6b 97 f2 67 d5 4f fb f6 39 25 55 a0
-After InvMixColumns: fc 90 74 13 d6 bc 9d 9e 01 ad 1a 21 4a 07 ef 4b
+After InvShiftRows: ea 01 ec fe 2d 0a 4f a6 3a d9 65 14 fa f6 7a e9
+After InvSubBytes: bb 09 83 0c fa a3 92 c5 a2 e5 bc 9b 14 d6 bd eb
+After AddRoundKey: 24 46 3e 11 36 63 5f a2 2e b0 f5 7d ff ca 09 c2
+After InvMixColumns: 9b e2 1b 2f bc ad 9e 27 ee 85 19 64 2f 38 3e d7
 
 
 For Block 2 Round 2...
-After InvShiftRows: fc 07 1a 9e d6 90 ef 21 01 bc 74 4b 4a ad 9d 13
-After InvSubBytes: 55 38 43 df 4a 96 61 7b 09 78 ca cc 5c 18 75 82
-After AddRoundKey: e4 21 a7 e3 e1 a0 da d1 55 95 68 19 27 e8 b6 4d
-After InvMixColumns: 87 f6 dd 2d a3 a7 0c 42 74 3c 30 c9 5f 79 a6 b4
+After InvShiftRows: 9b 38 19 27 bc e2 3e 64 ee ad 1b d7 2f 85 9e 2f
+After InvSubBytes: e8 76 8e 3d 78 3b d1 8c 99 18 44 0d 4e 67 df 4e
+After AddRoundKey: 57 6d b9 a5 2b b4 a1 f6 d9 8d c0 8c 29 2e 22 81
+After InvMixColumns: bb de 19 5a c2 5f c3 96 cd cb e4 fa f8 4f a0 b3
 
 
 For Block 2 Round 3...
-After InvShiftRows: 87 79 30 42 a3 f6 a6 c9 74 a7 dd b4 5f 3c 0c 2d
-After InvSubBytes: ea af 08 f6 71 d6 c5 12 ca 89 c9 c6 84 6d 81 fa
-After AddRoundKey: 7f 59 4e 06 6b f9 9a 84 3d 52 d0 b9 a3 70 e0 e0
-After InvMixColumns: c4 23 29 a0 3d 50 cf 2e 4c fa ad 1d 18 2c e6 01
+After InvShiftRows: bb 4f e4 96 c2 de a0 fa cd 5f 19 b3 f8 cb c3 5a
+After InvSubBytes: fe 92 ae 35 a8 9c 47 14 80 84 8e 4b e1 59 33 46
+After AddRoundKey: 47 3f b6 61 44 08 00 f6 93 9e 7a b0 c6 85 4a 08
+After InvMixColumns: fe f5 4a ee ca d0 e1 41 a5 50 d9 eb 4f 0b c1 84
 
 
 For Block 2 Round 4...
-After InvShiftRows: c4 2c ad 2e 3d 23 e6 1d 4c 50 29 01 18 fa cf a0
-After InvSubBytes: 88 42 18 c3 8b 32 f5 de 5d 6c 4c 09 34 14 5f 47
-After AddRoundKey: e9 08 13 43 04 eb ec b8 b0 98 0a e0 e4 d2 27 22
-After InvMixColumns: bb 47 38 75 58 a6 dd 98 b6 d4 93 33 19 7e bc e8
+After InvShiftRows: fe 0b d9 41 ca f5 c1 eb a5 d0 4a 84 4f 50 e1 ee
+After InvSubBytes: 0c 9e e5 f8 10 77 dd 3c 29 60 5c 4f 92 6c e0 99
+After AddRoundKey: 41 6e 28 b4 45 4e 82 8a d6 ee ef 56 a6 aa 6d 2c
+After InvMixColumns: fc fb e8 5c 79 eb b8 29 a7 df 87 7e ac 02 fd 1e
 
 
 For Block 2 Round 5...
-After InvShiftRows: bb 7e 93 98 58 47 bc 33 b6 a6 38 e8 19 d4 dd 75
-After InvSubBytes: fe 8a 22 e2 5e 16 78 66 79 c5 76 c8 8e 19 c9 3f
-After AddRoundKey: 9c 72 4d 45 b0 85 6a 80 1b e8 29 47 b3 2b f7 b3
-After InvMixColumns: a5 47 a3 a7 e2 29 9d 89 37 e2 24 6c f5 b8 12 83
+After InvShiftRows: fc 02 87 29 79 fb fd 7e a7 eb e8 1e ac df b8 5c
+After InvSubBytes: 55 6a ea 4c af 63 21 8a 89 3c c8 e9 aa ef 9a a7
+After AddRoundKey: 6a 28 b6 1f b7 aa b3 70 23 8b 24 46 61 a7 a4 0b
+After InvMixColumns: 41 21 50 db e9 a9 4a d4 b4 17 3c 55 c3 2b d4 55
 
 
 For Block 2 Round 6...
-After InvShiftRows: a5 b8 24 89 e2 47 12 6c 37 29 a3 83 f5 e2 9d a7
-After InvSubBytes: 29 9a a6 f2 3b 16 39 b8 b2 4c 71 41 77 3b 75 89
-After AddRoundKey: 9b 8d b2 9a b7 7d 44 f9 3e f2 3c 28 28 24 14 8a
-After InvMixColumns: c6 7a 93 11 3b cb 26 a1 f7 72 5e 03 ae a4 ad 35
+After InvShiftRows: 41 2b 3c d4 e9 21 d4 55 b4 a9 50 55 c3 17 4a db
+After InvSubBytes: f8 0b 6d 19 eb 7b 19 ed c6 b7 6c ed 33 87 5c 9f
+After AddRoundKey: c1 fc 4a a5 cc f0 d7 44 74 c9 12 b8 52 78 8e 9c
+After InvMixColumns: b9 ec 8d 0a 78 f8 26 09 39 14 71 4b b8 d1 14 45
 
 
 For Block 2 Round 7...
-After InvShiftRows: c6 a4 5e a1 3b 7a ad 03 f7 cb 93 35 ae 72 26 11
-After InvSubBytes: c7 1d 9d f1 49 bd 18 d5 26 59 22 d9 be 1e 23 e3
-After AddRoundKey: 4f 7b 8b ff 77 c1 71 fc 26 8c 12 f1 6d bf 0f 89
-After InvMixColumns: 6c d0 28 d4 e0 b6 90 fd 8e 73 28 9c 83 de 49 40
+After InvShiftRows: b9 d1 71 09 78 ec 14 4b 39 f8 8d 45 b8 14 26 0a
+After InvSubBytes: db 51 2c 40 c1 83 9b cc 5b e1 b4 68 9a 9b 23 a3
+After AddRoundKey: e6 37 ba 9a df ff 72 d9 ce 14 04 94 49 1a 8f f5
+After InvMixColumns: 0c 8c a9 d8 a2 d9 02 f2 48 2e 16 3a a0 c0 34 7d
 
 
 For Block 2 Round 8...
-After InvShiftRows: 6c de 28 fd e0 d0 49 9c 8e b6 28 40 83 73 90 d4
-After InvSubBytes: b8 9c ee 21 a0 60 a4 1c e6 79 ee 72 41 8f 96 19
-After AddRoundKey: a6 66 d4 49 16 7a db 3b d8 d0 b7 73 92 fb 8a 5b
-After InvMixColumns: 6d 26 a5 b3 57 bc 99 fe 99 52 75 72 2f a0 5c 6b
+After InvShiftRows: 0c c0 16 f2 a2 8c 34 3a 48 d9 a9 7d a0 2e 02 d8
+After InvSubBytes: 81 1f ff 04 1a f0 28 a2 d4 e5 b7 13 47 c3 6a 2d
+After AddRoundKey: 2a e5 c5 84 39 ea 57 6d 5f 6c ee fa 01 b7 76 87
+After InvMixColumns: ac a8 44 ce c7 41 60 0f cf 19 30 c1 f8 a7 01 19
 
 
 For Block 2 Round 9...
-After InvShiftRows: 6d a0 75 fe 57 26 5c 72 99 bc a5 6b 2f 52 99 b3
-After InvSubBytes: b3 47 3f 0c da 23 a7 1e f9 78 29 05 4e 48 f9 4b
-After AddRoundKey: 6e d3 1f 31 72 c3 e2 51 71 cb 0f 23 a3 95 bc 08
-After InvMixColumns: b7 92 fb 4d 6f ed fb 7b b7 9f fe 40 4d 7b 4d f9
+After InvShiftRows: ac a7 30 0f c7 a8 01 c1 cf 41 44 19 f8 19 60 ce
+After InvSubBytes: aa 89 08 fb 31 6f 09 dd 5f f8 86 8e e1 8e 90 ec
+After AddRoundKey: 57 1d 28 c6 b9 8f 4c 92 f7 6b a0 a8 2c 73 d5 af
+After InvMixColumns: d7 c5 fb 4d c5 8f fb 59 cb 9f af 6f 4d 6f fe f9
 
 
 For Block 2 Round 10...
-After InvShiftRows: b7 7b fe 7b 6f 92 4d 40 b7 ed fb f9 4d 9f fb 4d
-After InvSubBytes: 20 03 0c 03 06 74 65 72 20 53 63 69 65 6e 63 65
-After AddRoundKey: 63 6c 61 73 73 00 00 00 00 00 00 00 00 00 00 00
+After InvShiftRows: d7 6f af 59 c5 c5 fe 6f cb 8f fb f9 4d 9f fb 4d
+After InvSubBytes: 0d 06 1b 15 07 07 0c 06 59 73 63 69 65 6e 63 65
+After AddRoundKey: 6e 69 76 65 72 73 69 74 79 00 00 00 00 00 00 00
 After InvMixColumns: 
 
 
-Final PlainText (Hex): 49 20 6c 69 6b 65 20 63 6f 6d 70 75 74 65 72 20 63 6c 61 73 73 00 00 00 00 00 00 00 00 00 00 00
-Final PlainText (String): I like computer class           
+Final PlainText (Hex): 74 65 78 61 73 20 73 6f 75 74 68 65 72 6e 20 75 6e 69 76 65 72 73 69 74 79 00 00 00 00 00 00 00
+Final PlainText (String): texas southern university       
 
 
 

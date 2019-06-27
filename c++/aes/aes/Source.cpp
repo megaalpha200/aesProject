@@ -451,7 +451,7 @@ string aesEncrypt(string plaintextHex, string initialKeyHex)
 	{
 		plaintextBlocks[blockIndex] = padRightWithZeros(plaintextBlocks[blockIndex], 32);
 	}
-	string paddedInitialKey = padRightWithZeros(initialKeyHex, 32);
+	string paddedInitialKey = padRightWithZeros(initialKeyHex, 32).substr(0, 32);
 	string finalCipherTextStr = "";
 
 	int blockNum = 0;
@@ -504,7 +504,7 @@ string aesDecrypt(string ciphertextHex, string initialKeyHex)
 	{
 		ciphetextBlocks[blockIndex] = padRightWithZeros(ciphetextBlocks[blockIndex], 32);
 	}
-	string paddedInitialKey = padRightWithZeros(initialKeyHex, 32);
+	string paddedInitialKey = padRightWithZeros(initialKeyHex, 32).substr(0, 32);
 	string finalCipherTextStr = "";
 
 	int blockNum = 0;
@@ -938,8 +938,13 @@ string padLeftWithZeros(string s, int amount)
 	stringstream ss;
 	string paddedStr;
 
-	ss << "" << setfill('0') << setw(amount) << s;
-	getline(ss, paddedStr);
+	if (s.length() < amount)
+	{
+		ss << "" << setfill('0') << setw(amount) << s;
+		getline(ss, paddedStr);
+	}
+	else
+		paddedStr = s;
 
 	return paddedStr;
 }
@@ -949,8 +954,13 @@ string padRightWithZeros(string s, int amount)
 	stringstream ss;
 	string paddedStr;
 
-	ss << s << setw(amount - s.length()) << setfill('0') << "";
-	getline(ss, paddedStr);
+	if (s.length() < amount)
+	{
+		ss << s << setw(amount - s.length()) << setfill('0') << "";
+		getline(ss, paddedStr);
+	}
+	else
+		paddedStr = s;
 
 	return paddedStr;
 }

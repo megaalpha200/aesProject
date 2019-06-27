@@ -119,7 +119,7 @@ fun main() {
 
 fun aesEncrypt(plaintextHex: String, initialKeyHex: String) : String {
     val plaintextBlocks = plaintextHex.chunked(32) { it.padEnd(32, '0').toString() }
-    val paddedInitialKey = initialKeyHex.padEnd(32, '0')
+    val paddedInitialKey = initialKeyHex.padEnd(32, '0').substring(0, 32)
     val finalCipherTextList = arrayListOf<String>()
 
     plaintextBlocks.forEachIndexed { blockNum, block ->
@@ -159,7 +159,7 @@ fun aesEncrypt(plaintextHex: String, initialKeyHex: String) : String {
 
 fun aesDecrypt(ciphertextHex: String, initialKeyHex: String) : String {
     val ciphertextBlocks = ciphertextHex.chunked(32) { it.padEnd(32, '0').toString() }
-    val paddedInitialKey = initialKeyHex.padEnd(32, '0')
+    val paddedInitialKey = initialKeyHex.padEnd(32, '0').substring(0, 32)
     val finalPlainTextList = arrayListOf<String>()
 
     ciphertextBlocks.forEachIndexed { blockNum, block ->

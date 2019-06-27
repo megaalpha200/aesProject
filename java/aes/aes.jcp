@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+	<settings>
+		<label>aes</label>
+		<root_path>\</root_path>
+		<output_path>classes\</output_path>
+		<source_path>src\</source_path>
+		<jdkprofile_ref>JDK version 1.8.0_11</jdkprofile_ref>
+		<compiler_ref/>
+		<ant_ref/>
+	</settings>
+	<ant_events/>
+	<run_items>
+		<item run="AesMainFunctions"/>
+		<item run="Main"/>
+	</run_items>
+	<runtimes>
+		<runtime>
+			<label>&lt;Default&gt;</label>
+			<application_ref>&lt;Default&gt;</application_ref>
+			<applet_ref>&lt;Default&gt;</applet_ref>
+			<debugger_ref>&lt;Default&gt;</debugger_ref>
+			<param/>
+			<run>Main</run>
+			<verify>true</verify>
+		</runtime>
+	</runtimes>
+	<libraries/>
+	<files>
+		<include>
+			<folderitem>
+				<path>src</path>
+			</folderitem>
+			<folderitem>
+				<path>src\hexmanip</path>
+			</folderitem>
+			<folderitem>
+				<path>src\stringmanip</path>
+			</folderitem>
+			<folderitem>
+				<path>src\textconversions</path>
+			</folderitem>
+			<fileitem>
+				<path>src\AesMainFunctions.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\Main.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\RoundObject.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\hexmanip\HexManipulations.java</path>
+				<folder>src\hexmanip</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\stringmanip\StringManipulations.java</path>
+				<folder>src\stringmanip</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\textconversions\TextConversions.java</path>
+				<folder>src\textconversions</folder>
+			</fileitem>
+		</include>
+	</files>
+	<tasks/>
+</project>
