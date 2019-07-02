@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="AesForm">
+  <grid id="27dc6" binding="aesPanel" layout-manager="GridLayoutManager" row-count="10" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="815" height="821"/>
+    </constraints>
+    <properties>
+      <maximumSize width="800" height="500"/>
+      <minimumSize width="800" height="500"/>
+      <preferredSize width="800" height="500"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="44c61" class="javax.swing.JLabel" binding="titleLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="16"/>
+          <text value="AES Encryptor/Decryptor using Java"/>
+        </properties>
+      </component>
+      <component id="28d25" class="javax.swing.JLabel" binding="inputTextLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="1" use-parent-layout="false">
+            <preferred-size width="31" height="46"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Input:"/>
+        </properties>
+      </component>
+      <component id="b6312" class="javax.swing.JRadioButton" binding="inputTextStrRadioButton">
+        <constraints>
+          <grid row="1" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="54" height="46"/>
+          </grid>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="String"/>
+        </properties>
+      </component>
+      <component id="1ec63" class="javax.swing.JRadioButton" binding="inputTextHexRadioButton">
+        <constraints>
+          <grid row="1" column="5" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="91" height="46"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Hexadecimal"/>
+        </properties>
+      </component>
+      <component id="3c27b" class="javax.swing.JLabel" binding="keyLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Key:"/>
+        </properties>
+      </component>
+      <component id="80b4" class="javax.swing.JTextField" binding="keyTextField">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="350" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="dfb00" class="javax.swing.JRadioButton" binding="keyStrRadioButton">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="String"/>
+        </properties>
+      </component>
+      <component id="e66cc" class="javax.swing.JRadioButton" binding="keyHexRadioButton">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Hexadecimal"/>
+        </properties>
+      </component>
+      <component id="d348" class="javax.swing.JButton" binding="executeButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Execute"/>
+        </properties>
+      </component>
+      <component id="cb03a" class="javax.swing.JLabel" binding="outputTextHexLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Output Text (Hex):"/>
+        </properties>
+      </component>
+      <component id="a70e6" class="javax.swing.JLabel" binding="outputTextStrLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Output Text (String):"/>
+        </properties>
+      </component>
+      <component id="48023" class="javax.swing.JTextField" binding="outputTextHexTextField">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <editable value="false"/>
+          <enabled value="true"/>
+        </properties>
+      </component>
+      <component id="f1128" class="javax.swing.JLabel" binding="debugLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Debug:"/>
+        </properties>
+      </component>
+      <component id="ffa7c" class="javax.swing.JRadioButton" binding="encryptRadioButton">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="Encrypt"/>
+        </properties>
+      </component>
+      <component id="a8f83" class="javax.swing.JRadioButton" binding="decryptRadioButton">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Decrypt"/>
+        </properties>
+      </component>
+      <component id="d98a1" class="javax.swing.JButton" binding="outputTextHexCopyButton">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Copy"/>
+        </properties>
+      </component>
+      <component id="34c91" class="javax.swing.JButton" binding="outputTextStrCopyButton">
+        <constraints>
+          <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Copy"/>
+        </properties>
+      </component>
+      <scrollpane id="536dc">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="6" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="300"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="31b32" class="javax.swing.JTextArea" binding="debugTextArea">
+            <constraints/>
+            <properties>
+              <editable value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="9812e">
+        <constraints>
+          <grid row="1" column="1" row-span="2" col-span="3" vsize-policy="7" hsize-policy="7" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="350" height="46"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="d3766" class="javax.swing.JTextArea" binding="inputTextTextField">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="5e92f">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="350" height="20"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="b098c" class="javax.swing.JTextArea" binding="outputTextStrTextField">
+            <constraints/>
+            <properties>
+              <background color="-1"/>
+              <editable value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="inputTextRadioButtonGroup">
+      <member id="b6312"/>
+      <member id="1ec63"/>
+    </group>
+    <group name="keyRadioButtonGroup">
+      <member id="dfb00"/>
+      <member id="e66cc"/>
+    </group>
+    <group name="swapRadioButtonGroup">
+      <member id="188b9"/>
+      <member id="a3dd3"/>
+    </group>
+    <group name="encryptDecryptRadioButtonGroup">
+      <member id="ffa7c"/>
+      <member id="a8f83"/>
+    </group>
+  </buttonGroups>
+</form>

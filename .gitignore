@@ -4,6 +4,7 @@
 /**/x64
 /**/out
 /**/Debug
+/**/classes
 
 # dependencies
 /react.js/aes/node_modules

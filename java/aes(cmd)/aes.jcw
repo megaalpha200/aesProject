@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspace>
+	<settings>
+		<label>aes</label>
+		<id>26</id>
+		<version>0</version>
+	</settings>
+	<users>
+		<user>
+			<path>aes.jcu</path>
+		</user>
+	</users>
+	<projects>
+		<project>
+			<path>aes.jcp</path>
+		</project>
+	</projects>
+</workspace>
