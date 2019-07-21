@@ -27,12 +27,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AesForm.cpp" />
+    <ClCompile Include="base64.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AesForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="AesFunctions.h" />
+    <ClInclude Include="base64.h" />
     <ClInclude Include="Round.h" />
   </ItemGroup>
   <ItemGroup>

@@ -28,7 +28,8 @@
 		</runtime>
 	</runtimes>
 	<libraries>
-		<library_ref>Forms2</library_ref>
+		<library_ref>Forms(AES)</library_ref>
+		<library_ref>Apache Codec (AES)</library_ref>
 	</libraries>
 	<files>
 		<include>

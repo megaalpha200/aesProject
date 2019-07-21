@@ -2,14 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1beba19-492e-4df0-8bce-e71a862c743f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/aes(GUI)x/.idea/libraries/org_apache_directory_studio_org_apache_commons_codec_1_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/AesForm.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/AesForm.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/AesFunctions.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/AesFunctions.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/aes.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/aes.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/aes.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/aes.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)/aes.jcp" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)/aes.jcp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)/aes.jcu" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)/aes.jcu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)/aes.jcw" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)/aes.jcw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)/src/AesForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)/src/AesForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)/src/aesfunctions/AesMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)/src/aesfunctions/AesMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)/src/forms_rt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)/src/textconversions/TextConversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)/src/textconversions/TextConversions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)x/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)x/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)x/aes(GUI)x.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)x/aes(GUI)x.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)x/src/AesForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)x/src/AesForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)x/src/aesfunctions/AesMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)x/src/aesfunctions/AesMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)x/src/aesfunctions/AesMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)x/src/aesfunctions/AesMainFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/aes(GUI)x/src/textconversions/TextConversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/aes(GUI)x/src/textconversions/TextConversions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aes(GUI).iml" beforeDir="false" afterPath="$PROJECT_DIR$/aes(GUI).iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/AesMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/AesMain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/textConversions/conversions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/textConversions/conversions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/demo/view/AesMainView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/demo/view/AesMainView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../matlab/aes(GUI)/aesForm.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../matlab/aes(GUI)/aesForm.m" afterDir="false" />
     </list>
     <ignored path="tornadofx-empty-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,40 +40,41 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="tornadofx-empty-project" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/AesMain.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="36" column="62" lean-forward="true" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-              <folding>
-                <element signature="e#22#348#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1020">
+              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="339" lean-forward="true" selection-start-line="339" selection-end-line="339" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="133" selection-start-line="133" selection-end-line="133" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/hexmanip/hexManipulations.kt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/textConversions/conversions.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="51">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#25#98#0" expanded="true" />
               </folding>
@@ -70,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/view/AesMainView.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+            <state relative-caret-position="2108">
+              <caret line="137" column="57" lean-forward="true" selection-start-line="137" selection-start-column="57" selection-end-line="137" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -135,11 +150,11 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/app/Styles.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/app/AesApp.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/view/MainView.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/view/AesMainView.kt" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/textConversions/conversions.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/AesMain.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/view/AesMainView.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt" />
       </list>
     </option>
   </component>
@@ -150,11 +165,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1292" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -162,8 +175,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,6 +259,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -262,7 +275,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../java/aes(GUI)x" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -450,17 +463,20 @@
       <workItem from="1517468649479" duration="15000" />
       <workItem from="1561992499541" duration="22083000" />
       <workItem from="1562785886402" duration="320000" />
+      <workItem from="1563289543725" duration="1342000" />
+      <workItem from="1563291124241" duration="47000" />
+      <workItem from="1563724210088" duration="7686000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28901000" />
+    <option name="totallyTimeSpent" value="37976000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" order="0" visible="true" weight="0.20801815" />
+      <window_info id="Project" order="0" weight="0.44666666" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="UI Designer" order="3" />
@@ -470,14 +486,14 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919093" weight="0.3267974" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919093" weight="0.32488987" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39746544" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5008091" side_tool="true" weight="0.32718894" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3267974" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32575756" />
       <window_info anchor="bottom" id="JRebel remote servers log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="JRebel Executor" order="12" />
@@ -563,9 +579,6 @@
     <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.5.5/tornadofx-1.5.5-sources.jar!/tornadofx/Component.kt" />
     <entry file="jar://$MAVEN_REPOSITORY$/no/tornado/tornadofx/1.5.5/tornadofx-1.5.5-sources.jar!/tornadofx/osgi/StylesheetProvider.kt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/scene/control/TableView.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/hexmanip/hexManipulations.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/RoundObject.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -601,10 +614,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/view/AesMainView.kt">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        <state relative-caret-position="289">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/AesMain.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/textConversions/conversions.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#25#98#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -625,37 +655,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/view/AesMainView.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        <state relative-caret-position="2108">
+          <caret line="137" column="57" lean-forward="true" selection-start-line="137" selection-start-column="57" selection-end-line="137" selection-end-column="57" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/hexmanip/hexManipulations.kt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/textConversions/conversions.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#25#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/example/demo/AesFunctions/AesMain.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="36" column="62" lean-forward="true" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-          <folding>
-            <element signature="e#22#348#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="339" lean-forward="true" selection-start-line="339" selection-end-line="339" />
         </state>
       </provider>
     </entry>

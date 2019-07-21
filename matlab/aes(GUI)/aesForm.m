@@ -169,6 +169,8 @@ function executeBtn_Callback(hObject, eventdata, handles)
 
         inputText = get(handles.inputTextEdit, 'String');
         inputKey = get(handles.inputKeyEdit, 'String');
+        
+        startDateTime = datetime('now', 'Format', 'dd-MM-yyyy HH:mm:ss.SSS');
 
         [inputTextHex, inputTextHexDispStr] = encryptDecryptInputTextPrep(inputText, cipherMode, inputTextMode);
         [keyHex, keyHexDispStr] = keyTextPrep(inputKey, keyTextMode);
@@ -194,7 +196,13 @@ function executeBtn_Callback(hObject, eventdata, handles)
             error('Please enter inputs!');
         end
 
+        endDateTime = datetime('now', 'Format', 'dd-MM-yyyy HH:mm:ss.SSS');
+        td = endDateTime - startDateTime;
+        td.Format = 's';
+        td = char(td);
+        
         debugOutputStr = horzcat(debugOutputStr, outputDispStr);
+        debugOutputStr = horzcat(debugOutputStr, sprintf('\nElapsed Time: %s\n\n', td));
 
         set(handles.outputHexEdit, 'String', outputHexDisp);
         set(handles.outputStrEdit, 'String', outputStringDisp);

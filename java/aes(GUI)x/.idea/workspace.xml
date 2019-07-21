@@ -2,60 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="17f24bd2-bed7-4ce9-88a3-bb050c45093c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../aes(cmd)x/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../aes(cmd)x/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../c++/aes/aes.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../c++/aes/aes/Round.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../c++/aes/aes/Source.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../c++/aes/aes/aes.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../c++/aes/aes/aes.vcxproj.filters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../c++/aes/aes/aes.vcxproj.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../c++/aes/aes/debug.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/aes.jcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/aes.jcu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/aes.jcw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/AesMainFunctions$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/AesMainFunctions$Mode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/AesMainFunctions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/Main$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/Main$WrongMenuChoiceException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/RoundObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/hexmanip/HexManipulations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/stringmanip/StringManipulations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/classes/textconversions/TextConversions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/src/AesMainFunctions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/src/RoundObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/src/hexmanip/HexManipulations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/src/stringmanip/StringManipulations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/src/textconversions/TextConversions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aes/src_aes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/aes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/src/AesMainFunctions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/src/RoundObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/src/hexmanip/HexManipulations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/src/stringmanip/StringManipulations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aesx/src/textconversions/TextConversions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/aes.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/src/RoundObject.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/src/aesMainFunctions.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/src/hexmanip/hexManipulations.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/src/main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kotlin/aes/src/textConversions/conversions.kt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_directory_studio_org_apache_commons_codec_1_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/AesForm.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/AesForm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/AesFunctions.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/AesFunctions.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/aes.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/aes.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/aes.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../../c++/aes(GUI)/aes/aes.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aes(GUI)/aes.jcp" beforeDir="false" afterPath="$PROJECT_DIR$/../aes(GUI)/aes.jcp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aes(GUI)/aes.jcu" beforeDir="false" afterPath="$PROJECT_DIR$/../aes(GUI)/aes.jcu" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aes(GUI)/aes.jcw" beforeDir="false" afterPath="$PROJECT_DIR$/../aes(GUI)/aes.jcw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aes(GUI)/src/AesForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aes(GUI)/src/AesForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aes(GUI)/src/aesfunctions/AesMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aes(GUI)/src/aesfunctions/AesMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aes(GUI)/src/forms_rt.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aes(GUI)/src/textconversions/TextConversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aes(GUI)/src/textconversions/TextConversions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aes(GUI)x.iml" beforeDir="false" afterPath="$PROJECT_DIR$/aes(GUI)x.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AesForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AesForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aesfunctions/AesMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aesfunctions/AesMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aesfunctions/AesMainFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aesfunctions/AesMainFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/textconversions/TextConversions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/textconversions/TextConversions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin/aes(GUI)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin/aes(GUI)/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin/aes(GUI)/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin/aes(GUI)/src/main/kotlin/com/example/demo/AesFunctions/aesMainFunctions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kotlin/aes(GUI)/src/main/kotlin/com/example/demo/view/AesMainView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../kotlin/aes(GUI)/src/main/kotlin/com/example/demo/view/AesMainView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../matlab/aes(GUI)/aesForm.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../matlab/aes(GUI)/aesForm.m" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,31 +33,45 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AesForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+            <state relative-caret-position="1118">
+              <caret line="72" column="64" selection-start-line="72" selection-start-column="64" selection-end-line="72" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="initializer##0;class#AesForm#0" expanded="true" />
-                <element signature="e#15073#15074#0" expanded="true" />
-                <element signature="e#15104#15105#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/textconversions/TextConversions.java">
+        <entry file="file://$PROJECT_DIR$/src/aesfunctions/AesMainFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="306">
+              <caret line="332" lean-forward="true" selection-start-line="332" selection-end-line="332" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/stringmanip/StringManipulations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hexmanip/HexManipulations.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -114,25 +96,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/textconversions/TextConversions.java" />
-        <option value="$PROJECT_DIR$/src/AesForm.java" />
         <option value="$PROJECT_DIR$/src/AesForm.form" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+        <option value="$PROJECT_DIR$/src/textconversions/TextConversions.java" />
+        <option value="$PROJECT_DIR$/src/aesfunctions/AesMain.java" />
+        <option value="$PROJECT_DIR$/src/AesForm.java" />
+        <option value="$PROJECT_DIR$/src/aesfunctions/AesMainFunctions.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1292" />
-    <option name="height" value="876" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -140,7 +114,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,22 +127,45 @@
               <item name="aes(GUI)x" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="aes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aes(GUI)x" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aesfunctions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aes(GUI)x" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="hexmanip" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aes(GUI)x" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="stringmanip" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/redist/forms_rt.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propGUI" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -247,71 +244,101 @@
       <option name="presentableId" value="Default" />
       <updated>1562030293418</updated>
       <workItem from="1562030296050" duration="2148000" />
+      <workItem from="1563290978829" duration="886000" />
+      <workItem from="1563724343916" duration="10000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2148000" />
+    <option name="totallyTimeSpent" value="13034000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24919094" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" weight="0.32949308" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32949308" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32819384" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Module Dependencies" weight="0.32928804" />
-      <window_info anchor="right" id="Flutter Inspector" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Flutter Outline" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32949308" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Flutter Inspector" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Module Dependencies" order="7" weight="0.32889125" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Flutter Outline" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AesForm.java">
+    <entry file="file://$PROJECT_DIR$/src/textconversions/TextConversions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="initializer##0;class#AesForm#0" expanded="true" />
-            <element signature="e#15073#15074#0" expanded="true" />
-            <element signature="e#15104#15105#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aesfunctions/AesMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="36" column="79" lean-forward="true" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AesForm.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/textconversions/TextConversions.java">
+    <entry file="file://$PROJECT_DIR$/src/hexmanip/HexManipulations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        <state relative-caret-position="425">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AesForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1118">
+          <caret line="72" column="64" selection-start-line="72" selection-start-column="64" selection-end-line="72" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stringmanip/StringManipulations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aesfunctions/AesMainFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="332" lean-forward="true" selection-start-line="332" selection-end-line="332" />
         </state>
       </provider>
     </entry>

@@ -12,6 +12,7 @@ import tornadofx.*
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 import java.lang.StringBuilder
+import java.util.*
 import javax.swing.JOptionPane
 
 
@@ -105,6 +106,8 @@ class AesMainView : View("AES Encryptor/Decryptor") {
             val textModeKey = if (keyStrRadioButton!!.isSelected) TextMode.STRING else TextMode.HEX
             val cipherMode = if (encryptRadioButton!!.isSelected) CipherMode.ENCRYPT else CipherMode.DECRYPT
 
+            val startTime = Date()
+
             val inputTextHex = AesMain.encryptDecryptInputTextPrep(inputText, cipherMode, textModeInput)
             val keyTextHex = AesMain.keyTextPrep(inputKey, textModeKey)
 
@@ -124,6 +127,11 @@ class AesMainView : View("AES Encryptor/Decryptor") {
 
             if (outputTextHexStringPair == null || outputTextHexStringPair.first == "")
                 throw Exception("Please enter inputs!")
+
+            val endTime = Date()
+            val timeDiff = (endTime.time - startTime.time) / 1000.0
+            aesMainFunctions.debugOutput.append("\nElapsed Time: $timeDiff secs\n\n")
+
 
             val outputTextHex = outputTextHexStringPair.first
             val outputTextStr = outputTextHexStringPair.second

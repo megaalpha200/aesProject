@@ -3,6 +3,7 @@
 #include <msclr\marshal_cppstd.h>
 #include <exception>
 #include <string>
+#include <chrono>
 #include "AesFunctions.h"
 
 namespace aes {
@@ -411,6 +412,8 @@ namespace aes {
 			std::string inputText = context.marshal_as<std::string>(InputTextBox->Text->ToString());
 			std::string inputKey = context.marshal_as<std::string>(KeyTextBox->Text->ToString());
 
+			std::chrono::milliseconds startTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
+
 			std::string inputTextBin = AesFunctions::encryptDecryptInputTextPrep(inputText, cipherMode, inputTextMode);
 			std::string keyTextBin = AesFunctions::keyTextPrep(inputKey, keyTextMode);
 
@@ -434,6 +437,10 @@ namespace aes {
 
 			if (outputTextHexStringPair.first == "" || outputTextHexStringPair.second == "")
 				throw std::exception("Please enter inputs!");
+
+			std::chrono::milliseconds endTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
+			double timeDiff = (endTime.count() - startTime.count()) / 1000.0;
+			AesFunctions::outputStream << "\nElapsed Time: " << std::to_string(timeDiff) << " secs\n\n";
 
 			String^ outputTextHex = context.marshal_as<String^>(outputTextHexStringPair.first);
 			String^ outputTextStr = context.marshal_as<String^>(outputTextHexStringPair.second);

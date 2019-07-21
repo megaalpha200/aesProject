@@ -12,6 +12,7 @@
 #include <exception>
 #include <algorithm>
 #include "Round.h"
+#include "base64.h"
 
 namespace AesFunctions
 {
@@ -186,9 +187,8 @@ namespace AesFunctions
 		std::vector<std::string> chunkedInputTextHex;
 		std::vector<std::string> chunkedInputTextBin;
 
-		switch (textMode)
+		if (cipherMode == CipherMode::ENCRYPT && textMode == TextMode::STRING)
 		{
-		case TextMode::STRING:
 			inputTextHex = convertStringToHex(inputText);
 			inputTextBin = convertHexToBin(inputTextHex);
 
@@ -196,8 +196,20 @@ namespace AesFunctions
 			chunkString(inputTextBin, 8, chunkedInputTextBin);
 			outputStream << "Hex: " << joinToString(chunkedInputTextHex, " ") << std::endl;
 			outputStream << "Binary: " << joinToString(chunkedInputTextBin, " ") << std::endl;
-			break;
-		case TextMode::HEX:
+		}
+		else if (cipherMode == CipherMode::DECRYPT && textMode == TextMode::STRING)
+		{
+			std::string decodedBase64Str = base64_decode(inputText);
+			inputTextHex = convertStringToHex(decodedBase64Str);
+			inputTextBin = convertHexToBin(inputTextHex);
+
+			chunkString(inputTextHex, 2, chunkedInputTextHex);
+			chunkString(inputTextBin, 8, chunkedInputTextBin);
+			outputStream << "Hex: " << joinToString(chunkedInputTextHex, " ") << std::endl;
+			outputStream << "Binary: " << joinToString(chunkedInputTextBin, " ") << std::endl;
+		}
+		else if (textMode == TextMode::HEX)
+		{
 			removeSpaces(inputText);
 			inputTextHex = inputText;
 			inputTextBin = convertHexToBin(inputText);
@@ -206,11 +218,9 @@ namespace AesFunctions
 			chunkString(inputTextBin, 8, chunkedInputTextBin);
 			outputStream << "Hex: " << joinToString(chunkedInputTextHex, " ") << std::endl;
 			outputStream << "Binary: " << joinToString(chunkedInputTextBin, " ") << std::endl;
-			break;
-		default:
-			throw std::exception("An unexpected error has occured!");
-			break;
 		}
+		else
+			throw std::exception("An unexpected error has occured!");
 
 		outputStream << std::endl;
 
@@ -268,9 +278,9 @@ namespace AesFunctions
 		std::string cipherTextStr = convertHexToString(cipherTextHex);
 
 		outputStream << "Final CipherText (Hex): " << chunkAndJoinString(cipherTextHex, " ", 2) << std::endl;
-		outputStream << "Final CipherText (String): " << cipherTextStr << std::endl;
+		outputStream << "Final CipherText (String): " << base64_encode((unsigned char*)cipherTextStr.c_str(), cipherTextStr.size()) << std::endl;
 
-		outputPair = std::pair<std::string, std::string>(cipherTextHex, cipherTextStr);
+		outputPair = std::pair<std::string, std::string>(cipherTextHex, base64_encode((unsigned char*)cipherTextStr.c_str(), cipherTextStr.size()));
 	}
 
 	static void decrypt(std::string cipherTextHex, std::string initialKeyHex, std::pair<std::string, std::string> &outputPair)
@@ -290,8 +300,10 @@ namespace AesFunctions
 
 	static std::string aesEncrypt(std::string plaintextHex, std::string initialKeyHex)
 	{
+		int maxPlainTextHexSize = (int)ceil(plaintextHex.length() / 32.0) * 32;
+		std::string paddedPlaintextHex = padRightWithZeros(plaintextHex, maxPlainTextHexSize);
 		std::vector<std::string> plaintextBlocks;
-		chunkString(plaintextHex, 32, plaintextBlocks);
+		chunkString(paddedPlaintextHex, 32, plaintextBlocks);
 		for (int blockIndex = 0; blockIndex < plaintextBlocks.size(); blockIndex++)
 		{
 			plaintextBlocks[blockIndex] = padRightWithZeros(plaintextBlocks[blockIndex], 32);
@@ -343,8 +355,10 @@ namespace AesFunctions
 
 	static std::string aesDecrypt(std::string ciphertextHex, std::string initialKeyHex)
 	{
+		int maxCipherTextHexSize = (int)ceil(ciphertextHex.length() / 32.0) * 32;
+		std::string paddedCiphertextHex = padRightWithZeros(ciphertextHex, maxCipherTextHexSize);
 		std::vector<std::string> ciphetextBlocks;
-		chunkString(ciphertextHex, 32, ciphetextBlocks);
+		chunkString(paddedCiphertextHex, 32, ciphetextBlocks);
 		for (int blockIndex = 0; blockIndex < ciphetextBlocks.size(); blockIndex++)
 		{
 			ciphetextBlocks[blockIndex] = padRightWithZeros(ciphetextBlocks[blockIndex], 32);

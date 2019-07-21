@@ -18,6 +18,9 @@
     <ClCompile Include="AesForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AesForm.h">
@@ -28,6 +31,9 @@
     </ClInclude>
     <ClInclude Include="Round.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="base64.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

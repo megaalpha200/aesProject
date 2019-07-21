@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.util.Date;
 
 import static aesfunctions.AesMainFunctions.CipherMode.DECRYPT;
 import static aesfunctions.AesMainFunctions.CipherMode.ENCRYPT;
@@ -48,6 +49,8 @@ public class AesForm {
                 AesMainFunctions.TextMode textModeKey = (keyStrRadioButton.isSelected()) ? STRING : HEX;
                 AesMainFunctions.CipherMode cipherMode = (encryptRadioButton.isSelected()) ? ENCRYPT : DECRYPT;
 
+                Date startTime = new Date();
+
                 String inputTextBin = AesMain.encryptDecryptInputTextPrep(inputText, cipherMode, textModeInput);
                 String keyTextBin = AesMain.keyTextPrep(inputKey, textModeKey);
 
@@ -56,18 +59,22 @@ public class AesForm {
                 switch (cipherMode) {
                     case ENCRYPT:
                         outputTextHexStringPair = AesMain.encrypt(inputTextBin, keyTextBin);
-                        completionMessage = "The PlainText has been sucessfully Encrypted!";
+                        completionMessage = "The PlainText has been successfully Encrypted!";
                         break;
                     case DECRYPT:
                         outputTextHexStringPair = AesMain.decrypt(inputTextBin, keyTextBin);
-                        completionMessage = "The CipherText has been sucessfully Decrypted!";
+                        completionMessage = "The CipherText has been successfully Decrypted!";
                         break;
                     default:
-                        throw new Exception("An unexpected error has occured!");
+                        throw new Exception("An unexpected error has occurred!");
                 }
 
                 if (outputTextHexStringPair == null || outputTextHexStringPair.getKey().equals(""))
                     throw new Exception("Please enter inputs!");
+
+                Date endTime = new Date();
+                double timeDiff = (endTime.getTime() - startTime.getTime()) / 1000.0;
+                debugOutput.append("\nElapsed Time: ").append(timeDiff).append(" secs\n\n");
 
                 String outputTextHex = outputTextHexStringPair.getKey();
                 String outputTextStr = outputTextHexStringPair.getValue();
