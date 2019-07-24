@@ -116,21 +116,21 @@ class AesMainView : View("AES Encryptor/Decryptor") {
             when (cipherMode) {
                 CipherMode.ENCRYPT -> {
                     outputTextHexStringPair = AesMain.encrypt(inputTextHex, keyTextHex)
-                    completionMessage = "The PlainText has been sucessfully Encrypted!"
+                    completionMessage = "The PlainText has been successfully Encrypted!"
                 }
                 CipherMode.DECRYPT -> {
                     outputTextHexStringPair = AesMain.decrypt(inputTextHex, keyTextHex)
-                    completionMessage = "The CipherText has been sucessfully Decrypted!"
+                    completionMessage = "The CipherText has been successfully Decrypted!"
                 }
-                else -> throw Exception("An unexpected error has occured!")
+                else -> throw Exception("An unexpected error has occurred!")
             }
 
             if (outputTextHexStringPair == null || outputTextHexStringPair.first == "")
                 throw Exception("Please enter inputs!")
 
             val endTime = Date()
-            val timeDiff = (endTime.time - startTime.time) / 1000.0
-            aesMainFunctions.debugOutput.append("\nElapsed Time: $timeDiff secs\n\n")
+            val timeDiff = (endTime.time - startTime.time) + 0.0
+            aesMainFunctions.debugOutput.append("\nElapsed Time: $timeDiff milliseconds\n\n")
 
 
             val outputTextHex = outputTextHexStringPair.first

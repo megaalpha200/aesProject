@@ -424,11 +424,11 @@ namespace aes {
 			{
 			case AesFunctions::CipherMode::ENCRYPT:
 				AesFunctions::encrypt(inputTextBin, keyTextBin, outputTextHexStringPair);
-				completionMessage = "The PlainText has been sucessfully Encrypted!";
+				completionMessage = "The PlainText has been successfully Encrypted!";
 				break;
 			case AesFunctions::CipherMode::DECRYPT:
 				AesFunctions::decrypt(inputTextBin, keyTextBin, outputTextHexStringPair);
-				completionMessage = "The CipherText has been sucessfully Decrypted!";
+				completionMessage = "The CipherText has been successfully Decrypted!";
 				break;
 			default:
 				throw std::exception("An unexpected error has occured!");
@@ -439,8 +439,10 @@ namespace aes {
 				throw std::exception("Please enter inputs!");
 
 			std::chrono::milliseconds endTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
-			double timeDiff = (endTime.count() - startTime.count()) / 1000.0;
-			AesFunctions::outputStream << "\nElapsed Time: " << std::to_string(timeDiff) << " secs\n\n";
+			double timeDiff = (endTime.count() - startTime.count()) + 0.0;
+			AesFunctions::outputStream << "\nElapsed Time: " << std::to_string(timeDiff) << " milliseconds\n\n";
+
+			completionMessage += " Elapsed Time: " + timeDiff + " milliseconds.";
 
 			String^ outputTextHex = context.marshal_as<String^>(outputTextHexStringPair.first);
 			String^ outputTextStr = context.marshal_as<String^>(outputTextHexStringPair.second);

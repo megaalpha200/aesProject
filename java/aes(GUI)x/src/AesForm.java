@@ -73,8 +73,8 @@ public class AesForm {
                     throw new Exception("Please enter inputs!");
 
                 Date endTime = new Date();
-                double timeDiff = (endTime.getTime() - startTime.getTime()) / 1000.0;
-                debugOutput.append("\nElapsed Time: ").append(timeDiff).append(" secs\n\n");
+                double timeDiff = (endTime.getTime() - startTime.getTime()) + 0.0;
+                debugOutput.append("\nElapsed Time: ").append(timeDiff).append(" milliseconds\n\n");
 
                 String outputTextHex = outputTextHexStringPair.getKey();
                 String outputTextStr = outputTextHexStringPair.getValue();

@@ -198,11 +198,12 @@ function executeBtn_Callback(hObject, eventdata, handles)
 
         endDateTime = datetime('now', 'Format', 'dd-MM-yyyy HH:mm:ss.SSS');
         td = endDateTime - startDateTime;
-        td.Format = 's';
-        td = char(td);
-        
+        td.Format= 'hh:mm:ss.SSSSS';
+        td = milliseconds(td);
+        td = num2str(td);
+
         debugOutputStr = horzcat(debugOutputStr, outputDispStr);
-        debugOutputStr = horzcat(debugOutputStr, sprintf('\nElapsed Time: %s\n\n', td));
+        debugOutputStr = horzcat(debugOutputStr, sprintf('\nElapsed Time: %s milliseconds\n\n', td));
 
         set(handles.outputHexEdit, 'String', outputHexDisp);
         set(handles.outputStrEdit, 'String', outputStringDisp);
